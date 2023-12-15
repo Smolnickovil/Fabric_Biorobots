@@ -291,10 +291,10 @@ header{
                         margin-top: 8px;
                         text-align: center;
                         font-family: Montserrat;
-                        font-size: 20px;
+                        font-size: 16px;
                         font-style: normal;
-                        font-weight: 600;
-                        line-height: 32px; /* 160% */
+                        font-weight: 500;
+                        line-height: 24px; /* 150% */                    
                     }
     
                 }
@@ -304,6 +304,61 @@ header{
                 @include testbord;
                 @include H2;
                 height: 372px;
+
+                .products{
+                    height: 269px + 48px;
+                    display: grid;
+                    grid-template-columns: 236px 276px 236px;
+
+                    .bioarm{
+                        @include testbord;
+                        // display: flex;
+                        // flex-flow: column wrap;   
+                    }
+                    .microchip{
+                        @include testbord;
+                        margin: 0px 20px;
+                    }
+
+                    .soul{
+                        @include testbord;   
+                    }
+
+                    .name{
+                        margin-top: 60px;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 32px;  
+                    }
+
+                    .price{
+                        margin-top: 5px;
+                        
+                        color: #A3B8CC;
+
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px; /* 150% */                    
+                    }
+    
+                    .quantity{
+                        margin-top: 15px;
+
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 24px; /* 120% */
+                    }
+                }
+
             }
 
             .blockproduction{

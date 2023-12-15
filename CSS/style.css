@@ -36,7 +36,7 @@
   display: flex;
   width: 236px;
   padding: 12px 60px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   border: none;
   border-radius: 60px;
@@ -58,6 +58,43 @@
 }
 .installbut:disabled {
   background: #4C5865;
+  color: #7D90A6;
+}
+
+.sellbut {
+  margin-top: 24px;
+  display: flex;
+  width: 236px;
+  padding: 12px 60px;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: none;
+  border-radius: 60px;
+  border: 2px solid #22B3E3;
+  background-color: rgba(255, 86, 34, 0);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  color: #22B3E3;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.sellbut:hover {
+  background: #7CDAF9;
+  border: 0px;
+  color: #212529;
+}
+.sellbut:active {
+  background-color: rgba(76, 88, 101, 0);
+  color: #22B3E3;
+  border: 2px solid #22B3E3;
+}
+.sellbut:disabled {
+  background: rgba(76, 88, 101, 0);
+  border: 2px solid #4C5865;
+  color: #4C5865;
 }
 
 * {
@@ -277,10 +314,10 @@ header {
   margin-top: 8px;
   text-align: center;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 32px; /* 160% */
+  font-weight: 500;
+  line-height: 24px; /* 150% */
 }
 .content .greetings .maincontent .blockstock {
   border: 1px solid rgba(255, 255, 255, 0);
@@ -294,6 +331,49 @@ header {
   font-size: 32px;
   font-style: normal;
   line-height: 40px; /* 125% */
+}
+.content .greetings .maincontent .blockstock .products {
+  height: 317px;
+  display: grid;
+  grid-template-columns: 236px 276px 236px;
+}
+.content .greetings .maincontent .blockstock .products .bioarm {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.content .greetings .maincontent .blockstock .products .microchip {
+  border: 1px solid rgba(255, 255, 255, 0);
+  margin: 0px 20px;
+}
+.content .greetings .maincontent .blockstock .products .soul {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.content .greetings .maincontent .blockstock .products .name {
+  margin-top: 60px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+.content .greetings .maincontent .blockstock .products .price {
+  margin-top: 5px;
+  color: #A3B8CC;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.content .greetings .maincontent .blockstock .products .quantity {
+  margin-top: 15px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 120% */
 }
 .content .greetings .maincontent .blockproduction {
   border: 1px solid rgba(255, 255, 255, 0);
