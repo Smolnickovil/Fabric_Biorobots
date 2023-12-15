@@ -13,7 +13,6 @@
         font-family: Montserrat;
         font-size: 32px;
         font-style: normal;
-        // font-weight: 600;
         line-height: 40px; /* 125% */
         
     }
@@ -59,7 +58,6 @@ header{
         width: 24px;
         display: flex;
         flex-direction: column;
-        //выучит гриды и флексы
 
         .num{
             display: flex;
@@ -86,10 +84,8 @@ header{
 
             width: 24px;
             height: 80px;
-            // transform: rotate(-90deg);   
-            // writing-mode:;
             display: flex;
-            justify-content: end;
+            // justify-content: end;
             writing-mode:vertical-rl;//эксперементировать с этим
 
             margin-top:114px;
@@ -102,6 +98,9 @@ header{
             line-height: 24px; /* 200% */
             letter-spacing: 1.2px;
             text-transform: uppercase;
+            
+            transform: rotateY(180deg) rotateX(180deg);// 
+              
         }
 
         .symbol{
@@ -222,7 +221,8 @@ header{
                     position: absolute;
                     margin-left:20px + 176px;
                     margin-top: 102px;
-        
+                    
+                    transform: rotateY(180deg);
                     // fill: url(<path-to-image>), lightgray -111.429px -26.989px / 307.113% 135.259% no-repeat;
                 }
     

@@ -9,7 +9,7 @@
 <filter id="filter0_d_3162_44" x="0" y="0" width="281" height="247" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="8"/>
+<feOffset dy="0"/>
 <feGaussianBlur stdDeviation="45"/>
 <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.497333 0 0 0 0 0.133333 0 0 0 1 0"/>
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3162_44"/>

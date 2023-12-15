@@ -156,7 +156,6 @@ header {
   width: 24px;
   height: 80px;
   display: flex;
-  justify-content: end;
   writing-mode: vertical-rl;
   margin-top: 114px;
   color: #667380;
@@ -167,6 +166,7 @@ header {
   line-height: 24px; /* 200% */
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  transform: rotateY(180deg) rotateX(180deg);
 }
 .content .pagenum .symbol {
   border: 1px solid rgba(255, 255, 255, 0);
@@ -250,6 +250,7 @@ header {
   position: absolute;
   margin-left: 196px;
   margin-top: 102px;
+  transform: rotateY(180deg);
 }
 .content .greetings .maincontent {
   border: 1px solid rgba(255, 255, 255, 0);
