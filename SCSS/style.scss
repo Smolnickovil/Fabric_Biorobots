@@ -1,6 +1,21 @@
 @mixin testbord {
-    border:1px solid #ffffff;    
+    border:1px solid #ffffff00;    
 } 
+
+@mixin H2($heig: 40px){
+    h2{
+        @include testbord;
+
+        height: $heig;
+        /* 1920/H2 */
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        // font-weight: 600;
+        line-height: 40px; /* 125% */
+        
+    }
+}
 
 *{
     margin: 0;
@@ -159,86 +174,135 @@ header{
         margin-top: 96px;
         margin-left: 106px;
         display: flex;
+        flex-wrap: wrap;
         // border:1px solid $testbord;
         height: 320px + 1955px;
         width: 470px + 50px + 366px;
 
-        .maintext{
-            @include testbord;
-            width: 470px;
-            height: 320px;
-            margin: 0px 50px 0px 0px;
-            // border: 1px solid $testbord;
+        .title{
+            display: flex;
 
-            h1{
+            .maintext{
                 @include testbord;
-                
-                margin: 24px  0px;
-                /* 1920 / H1 */
-                font-family: Montserrat;
-                font-size: 56px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 72px; /* 128.571% */
-
-            }
-
-            p{
-                @include testbord;
-
                 width: 470px;
-                margin-bottom: 24px;
-
-                color: #A3B8CC;
-                font-family: Montserrat;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 32px; /* 133.333% */
-
+                height: 320px;
+                margin: 0px 50px 0px 0px;
                 // border: 1px solid $testbord;
-
+    
+                h1{
+                    @include testbord;
+                    
+                    margin: 24px  0px;
+                    /* 1920 / H1 */
+                    font-family: Montserrat;
+                    font-size: 56px;
+                    font-style: normal;
+                    // font-weight: 600;
+                    line-height: 72px; /* 128.571% */
+    
+                }
+    
+                p{
+                    @include testbord;
+    
+                    width: 470px;
+                    margin-bottom: 24px;
+    
+                    color: #A3B8CC;
+                    font-family: Montserrat;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 32px; /* 133.333% */
+    
+                    // border: 1px solid $testbord;
+    
+                }
+                
+    
             }
-            
-
+    
+    
+            .windrobots{
+                @include testbord;
+    
+                width: 366px;
+                height: 320px;
+                flex-shrink: 0;
+                display: flex;
+    
+                // border:1px solid $testbord;    
+    
+                .circle{
+                    width: 275px;
+                    height: 275px;
+                    flex-shrink: 0;
+                    margin: 4px 60px 41px 31px;
+        
+                    border-radius: 275px;
+                    background: #1E2936;
+    
+        
+                }
+                .robots1{
+                    position: absolute;
+                    margin-left: 0px;
+                }
+    
+                .robots2{
+                    position: absolute;
+                    margin-left:20px + 176px;
+                    margin-top: 102px;
+        
+                    // fill: url(<path-to-image>), lightgray -111.429px -26.989px / 307.113% 135.259% no-repeat;
+                }
+    
+        
+            }
+    
         }
 
 
-        .windrobots{
+        .maincontent{
             @include testbord;
-
-            width: 366px;
-            height: 320px;
-            flex-shrink: 0;
-            display: flex;
-
-            // border:1px solid $testbord;    
-
-            .circle{
-                width: 275px;
-                height: 275px;
-                flex-shrink: 0;
-                margin: 4px 60px 41px 31px;
-    
-                border-radius: 275px;
-                background: #1E2936;
-
-    
-            }
-            .robots1{
-                position: absolute;
-                margin-left: 0px;
+            width: 756px;
+            height: 1290px + 40px + 320px;
+        
+            .blockwallet{
+                @include testbord;
+                @include H2;
+                height: 300px +40px;
+                
             }
 
-            .robots2{
-                position: absolute;
-                margin-left:20px + 176px;
-                margin-top: 102px;
-    
-                // fill: url(<path-to-image>), lightgray -111.429px -26.989px / 307.113% 135.259% no-repeat;
+            .blockmarket{
+                @include testbord;
+                @include H2;
+
+                height: 446px + 40px;
             }
 
-    
+            .blockstock{
+                @include testbord;
+                @include H2;
+                height: 332px + 40px;
+            }
+
+            .blockproduction{
+                @include testbord;
+
+                div{
+                    @include testbord;
+                    height: 72px;
+                    display: flex;
+                    align-items: center;
+
+                    @include H2;
+
+                }
+
+                height: 60px + 72px + 320px;
+            }
         }
 
 

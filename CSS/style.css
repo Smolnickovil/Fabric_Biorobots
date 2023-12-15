@@ -43,7 +43,7 @@ header button p {
 }
 
 .content {
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0);
   width: 1016px;
   height: 2371px;
   margin: 0px auto;
@@ -51,7 +51,7 @@ header button p {
   justify-content: space-between;
 }
 .content .pagenum {
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0);
   margin-top: 144px;
   width: 24px;
   display: flex;
@@ -75,7 +75,7 @@ header button p {
   text-transform: uppercase;
 }
 .content .pagenum .text {
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0);
   width: 24px;
   height: 80px;
   display: flex;
@@ -92,7 +92,7 @@ header button p {
   text-transform: uppercase;
 }
 .content .pagenum .symbol {
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0);
   width: 24px;
   height: 24px;
   flex-shrink: 0;
@@ -111,31 +111,34 @@ header button p {
   margin-top: 364px;
 }
 .content .greetings {
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0);
   margin-top: 96px;
   margin-left: 106px;
   display: flex;
+  flex-wrap: wrap;
   height: 2275px;
   width: 886px;
 }
-.content .greetings .maintext {
-  border: 1px solid #ffffff;
+.content .greetings .title {
+  display: flex;
+}
+.content .greetings .title .maintext {
+  border: 1px solid rgba(255, 255, 255, 0);
   width: 470px;
   height: 320px;
   margin: 0px 50px 0px 0px;
 }
-.content .greetings .maintext h1 {
-  border: 1px solid #ffffff;
+.content .greetings .title .maintext h1 {
+  border: 1px solid rgba(255, 255, 255, 0);
   margin: 24px 0px;
   /* 1920 / H1 */
   font-family: Montserrat;
   font-size: 56px;
   font-style: normal;
-  font-weight: 600;
   line-height: 72px; /* 128.571% */
 }
-.content .greetings .maintext p {
-  border: 1px solid #ffffff;
+.content .greetings .title .maintext p {
+  border: 1px solid rgba(255, 255, 255, 0);
   width: 470px;
   margin-bottom: 24px;
   color: #A3B8CC;
@@ -145,14 +148,14 @@ header button p {
   font-weight: 600;
   line-height: 32px; /* 133.333% */
 }
-.content .greetings .windrobots {
-  border: 1px solid #ffffff;
+.content .greetings .title .windrobots {
+  border: 1px solid rgba(255, 255, 255, 0);
   width: 366px;
   height: 320px;
   flex-shrink: 0;
   display: flex;
 }
-.content .greetings .windrobots .circle {
+.content .greetings .title .windrobots .circle {
   width: 275px;
   height: 275px;
   flex-shrink: 0;
@@ -160,12 +163,75 @@ header button p {
   border-radius: 275px;
   background: #1E2936;
 }
-.content .greetings .windrobots .robots1 {
+.content .greetings .title .windrobots .robots1 {
   position: absolute;
   margin-left: 0px;
 }
-.content .greetings .windrobots .robots2 {
+.content .greetings .title .windrobots .robots2 {
   position: absolute;
   margin-left: 196px;
   margin-top: 102px;
+}
+.content .greetings .maincontent {
+  border: 1px solid rgba(255, 255, 255, 0);
+  width: 756px;
+  height: 1650px;
+}
+.content .greetings .maincontent .blockwallet {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 340px;
+}
+.content .greetings .maincontent .blockwallet h2 {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 40px;
+  /* 1920/H2 */
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  line-height: 40px; /* 125% */
+}
+.content .greetings .maincontent .blockmarket {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 486px;
+}
+.content .greetings .maincontent .blockmarket h2 {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 40px;
+  /* 1920/H2 */
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  line-height: 40px; /* 125% */
+}
+.content .greetings .maincontent .blockstock {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 372px;
+}
+.content .greetings .maincontent .blockstock h2 {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 40px;
+  /* 1920/H2 */
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  line-height: 40px; /* 125% */
+}
+.content .greetings .maincontent .blockproduction {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 452px;
+}
+.content .greetings .maincontent .blockproduction div {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.content .greetings .maincontent .blockproduction div h2 {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 40px;
+  /* 1920/H2 */
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  line-height: 40px; /* 125% */
 }/*# sourceMappingURL=style.css.map */
