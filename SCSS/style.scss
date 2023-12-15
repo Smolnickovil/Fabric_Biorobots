@@ -1,3 +1,5 @@
+@import "buttons";
+
 @mixin testbord {
     border:1px solid #ffffff00;    
 } 
@@ -37,44 +39,7 @@ header{
     height: 48px;
     width: 1016px;
     margin: 0px auto;
-
-
-    // border: 2px solid #ff0101;
     margin-top: 48px;
-
-    // svg{
-    // }
-
-    button{
-        // float: right;
-        // white-space: nowrap;//отмена переноса текста
-        display: flex;
-        width: 236px;
-        height: auto;
-        padding: 12px 18px;
-        justify-content: space-between;
-        align-items: flex-start; 
-        background-color: #ff7e2200;
-                    
-
-        // перенести в отдельный файл где будут прописаны стили
-        border-radius: 60px;
-        border: 2px solid #FF7F22;
-        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
-
-        p{
-            margin: auto;
-
-            text-align: center;
-            font-family: Montserrat;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 24px;
-            color: #FFF;    
-        }
-    }
-
 }
 
 
@@ -175,12 +140,14 @@ header{
         margin-left: 106px;
         display: flex;
         flex-wrap: wrap;
+        align-content: flex-start;
         // border:1px solid $testbord;
         height: 320px + 1955px;
         width: 470px + 50px + 366px;
 
         .title{
             display: flex;
+            height: 420px;
 
             .maintext{
                 @include testbord;
@@ -247,6 +214,8 @@ header{
                 .robots1{
                     position: absolute;
                     margin-left: 0px;
+                    // fill: #667380;
+
                 }
     
                 .robots2{
@@ -279,13 +248,62 @@ header{
                 @include testbord;
                 @include H2;
 
+                width: 754px;
                 height: 446px + 40px;
+
+                .products{
+                    height: 269px + 48px;
+                    display: grid;
+                    grid-template-columns: 236px 276px 236px;
+
+                    .bioarm{
+                        @include testbord;
+                        // display: flex;
+                        // flex-flow: column wrap;   
+                    }
+                    .microchip{
+                        @include testbord;
+                        margin: 0px 20px;
+                    }
+
+                    .soul{
+                        @include testbord;   
+                    }
+
+                    img{
+                        @include testbord;
+                        height: 128px;
+                        // position: absolute;
+                    }
+
+                    .name{
+                        margin-top: 25px;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        // font-style: normal;
+                        // font-weight: 600;
+                        line-height: 32px;  
+                    }
+
+                    .price{
+                        color: #A3B8CC;
+                        margin-top: 8px;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 32px; /* 160% */
+                    }
+    
+                }
             }
 
             .blockstock{
                 @include testbord;
                 @include H2;
-                height: 332px + 40px;
+                height: 372px;
             }
 
             .blockproduction{

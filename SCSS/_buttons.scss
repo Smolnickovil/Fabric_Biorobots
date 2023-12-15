@@ -1,0 +1,78 @@
+.createrob{
+    // float: right;
+    // white-space: nowrap;//отмена переноса текста
+    display: flex;
+    width: 236px;
+    height: auto;
+    padding: 12px 18px;
+    justify-content: space-between;
+    align-items: flex-start; 
+    background-color: #ff7e2200;
+                
+
+    // перенести в отдельный файл где будут прописаны стили
+    border-radius: 60px;
+    border: 2px solid #FF7F22;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+
+    p{
+        margin: auto;
+
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        color: #FFF;    
+    }
+
+    &:hover{
+        border: #FF5722;
+        background: #FF5722;
+    }
+
+    &:active{
+        background: #FF7F22;
+    }
+
+    &:disabled{
+        border: #4C5865;
+        color: #4C5865;
+    }
+
+}
+
+.installbut{
+    display: flex;
+    width: 236px;
+    padding: 12px 60px;
+    justify-content: center;
+    align-items: flex-start;
+
+    border: none;
+    border-radius: 60px;
+    background: linear-gradient(180deg, #FF7F22 0%, #FF5722 100%);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+
+    &:hover{
+        background: #FF5722;
+    }
+
+    &:active{
+        background: #FF7F22;
+    }
+
+    &:disabled{
+        background: #4C5865;
+    }
+}
+

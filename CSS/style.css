@@ -1,3 +1,65 @@
+.createrob {
+  display: flex;
+  width: 236px;
+  height: auto;
+  padding: 12px 18px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(255, 126, 34, 0);
+  border-radius: 60px;
+  border: 2px solid #FF7F22;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+}
+.createrob p {
+  margin: auto;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #FFF;
+}
+.createrob:hover {
+  border: #FF5722;
+  background: #FF5722;
+}
+.createrob:active {
+  background: #FF7F22;
+}
+.createrob:disabled {
+  border: #4C5865;
+  color: #4C5865;
+}
+
+.installbut {
+  display: flex;
+  width: 236px;
+  padding: 12px 60px;
+  justify-content: center;
+  align-items: flex-start;
+  border: none;
+  border-radius: 60px;
+  background: linear-gradient(180deg, #FF7F22 0%, #FF5722 100%);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.installbut:hover {
+  background: #FF5722;
+}
+.installbut:active {
+  background: #FF7F22;
+}
+.installbut:disabled {
+  background: #4C5865;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,28 +80,6 @@ header {
   width: 1016px;
   margin: 0px auto;
   margin-top: 48px;
-}
-header button {
-  display: flex;
-  width: 236px;
-  height: auto;
-  padding: 12px 18px;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: rgba(255, 126, 34, 0);
-  border-radius: 60px;
-  border: 2px solid #FF7F22;
-  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
-}
-header button p {
-  margin: auto;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  color: #FFF;
 }
 
 .content {
@@ -116,11 +156,13 @@ header button p {
   margin-left: 106px;
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   height: 2275px;
   width: 886px;
 }
 .content .greetings .title {
   display: flex;
+  height: 420px;
 }
 .content .greetings .title .maintext {
   border: 1px solid rgba(255, 255, 255, 0);
@@ -192,6 +234,7 @@ header button p {
 }
 .content .greetings .maincontent .blockmarket {
   border: 1px solid rgba(255, 255, 255, 0);
+  width: 754px;
   height: 486px;
 }
 .content .greetings .maincontent .blockmarket h2 {
@@ -202,6 +245,42 @@ header button p {
   font-size: 32px;
   font-style: normal;
   line-height: 40px; /* 125% */
+}
+.content .greetings .maincontent .blockmarket .products {
+  height: 317px;
+  display: grid;
+  grid-template-columns: 236px 276px 236px;
+}
+.content .greetings .maincontent .blockmarket .products .bioarm {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.content .greetings .maincontent .blockmarket .products .microchip {
+  border: 1px solid rgba(255, 255, 255, 0);
+  margin: 0px 20px;
+}
+.content .greetings .maincontent .blockmarket .products .soul {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.content .greetings .maincontent .blockmarket .products img {
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 128px;
+}
+.content .greetings .maincontent .blockmarket .products .name {
+  margin-top: 25px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  line-height: 32px;
+}
+.content .greetings .maincontent .blockmarket .products .price {
+  color: #A3B8CC;
+  margin-top: 8px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 160% */
 }
 .content .greetings .maincontent .blockstock {
   border: 1px solid rgba(255, 255, 255, 0);
