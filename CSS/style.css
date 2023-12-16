@@ -1,4 +1,4 @@
-.createrob {
+.createRob {
   display: flex;
   width: 236px;
   height: auto;
@@ -10,7 +10,7 @@
   border: 2px solid #FF7F22;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
 }
-.createrob p {
+.createRob p {
   margin: auto;
   text-align: center;
   font-family: Montserrat;
@@ -20,19 +20,19 @@
   line-height: 24px;
   color: #FFF;
 }
-.createrob:hover {
+.createRob:hover {
   border: #FF5722;
   background: #FF5722;
 }
-.createrob:active {
+.createRob:active {
   background: #FF7F22;
 }
-.createrob:disabled {
+.createRob:disabled {
   border: #4C5865;
   color: #4C5865;
 }
 
-.installbut {
+.installBut {
   display: flex;
   width: 236px;
   padding: 12px 60px;
@@ -50,18 +50,18 @@
   font-weight: 600;
   line-height: 24px; /* 150% */
 }
-.installbut:hover {
+.installBut:hover {
   background: #FF5722;
 }
-.installbut:active {
+.installBut:active {
   background: #FF7F22;
 }
-.installbut:disabled {
+.installBut:disabled {
   background: #4C5865;
   color: #7D90A6;
 }
 
-.sellbut {
+.sellBut {
   margin-top: 24px;
   display: flex;
   width: 236px;
@@ -81,19 +81,50 @@
   font-weight: 600;
   line-height: 24px; /* 150% */
 }
-.sellbut:hover {
+.sellBut:hover {
   background: #7CDAF9;
   border: 0px;
   color: #212529;
 }
-.sellbut:active {
+.sellBut:active {
   background-color: rgba(76, 88, 101, 0);
   color: #22B3E3;
   border: 2px solid #22B3E3;
 }
-.sellbut:disabled {
+.sellBut:disabled {
   background: rgba(76, 88, 101, 0);
   border: 2px solid #4C5865;
+  color: #4C5865;
+}
+
+.byToCoinsBut {
+  display: flex;
+  width: 236px;
+  height: auto;
+  padding: 12px 18px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 126, 34, 0);
+  border-radius: 60px;
+  border: 2px solid #FF7F22;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #FFF;
+}
+.byToCoinsBut:hover {
+  border: #FF5722;
+  background: #FF5722;
+}
+.byToCoinsBut:active {
+  background: #FF7F22;
+}
+.byToCoinsBut:disabled {
+  border: #4C5865;
   color: #4C5865;
 }
 
@@ -104,7 +135,7 @@
 }
 
 body {
-  color: #FFF;
+  color: #fff;
   height: 2467px;
   background: radial-gradient(82.33% 70.44% at 50% 0%, #26394D 0%, #212529 100%);
 }
@@ -120,21 +151,19 @@ header {
 }
 
 .content {
-  border: 1px solid rgba(255, 255, 255, 0);
   width: 1016px;
   height: 2371px;
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
 }
-.content .pagenum {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .pageNum {
   margin-top: 144px;
   width: 24px;
   display: flex;
   flex-direction: column;
 }
-.content .pagenum .num {
+.content .pageNum .num {
   display: flex;
   width: 24px;
   height: 24px;
@@ -151,8 +180,7 @@ header {
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
-.content .pagenum .text {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .pageNum .text {
   width: 24px;
   height: 80px;
   display: flex;
@@ -168,27 +196,25 @@ header {
   text-transform: uppercase;
   transform: rotateY(180deg) rotateX(180deg);
 }
-.content .pagenum .symbol {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .pageNum .symbol {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
   margin-top: 8px;
 }
-.content .pagenum .two {
+.content .pageNum .two {
   margin-top: 131px;
 }
-.content .pagenum .three {
+.content .pageNum .three {
   margin-top: 316px;
 }
-.content .pagenum .four {
+.content .pageNum .four {
   margin-top: 462px;
 }
-.content .pagenum .five {
+.content .pageNum .five {
   margin-top: 364px;
 }
 .content .greetings {
-  border: 1px solid rgba(255, 255, 255, 0);
   margin-top: 96px;
   margin-left: 106px;
   display: flex;
@@ -201,14 +227,12 @@ header {
   display: flex;
   height: 420px;
 }
-.content .greetings .title .maintext {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .title .mainText {
   width: 470px;
   height: 320px;
   margin: 0px 50px 0px 0px;
 }
-.content .greetings .title .maintext h1 {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .title .mainText h1 {
   margin: 24px 0px;
   /* 1920 / H1 */
   font-family: Montserrat;
@@ -216,8 +240,7 @@ header {
   font-style: normal;
   line-height: 72px; /* 128.571% */
 }
-.content .greetings .title .maintext p {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .title .mainText p {
   width: 470px;
   margin-bottom: 24px;
   color: #A3B8CC;
@@ -227,14 +250,13 @@ header {
   font-weight: 600;
   line-height: 32px; /* 133.333% */
 }
-.content .greetings .title .windrobots {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .title .windRobots {
   width: 366px;
   height: 320px;
   flex-shrink: 0;
   display: flex;
 }
-.content .greetings .title .windrobots .circle {
+.content .greetings .title .windRobots .circle {
   width: 275px;
   height: 275px;
   flex-shrink: 0;
@@ -242,27 +264,24 @@ header {
   border-radius: 275px;
   background: #1E2936;
 }
-.content .greetings .title .windrobots .robots1 {
+.content .greetings .title .windRobots .robots1 {
   position: absolute;
   margin-left: 0px;
 }
-.content .greetings .title .windrobots .robots2 {
+.content .greetings .title .windRobots .robots2 {
   position: absolute;
   margin-left: 196px;
   margin-top: 102px;
   transform: rotateY(180deg);
 }
-.content .greetings .maincontent {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent {
   width: 756px;
   height: 1650px;
 }
-.content .greetings .maincontent .blockwallet {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockWallet {
   height: 340px;
 }
-.content .greetings .maincontent .blockwallet h2 {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockWallet h2 {
   height: 40px;
   /* 1920/H2 */
   font-family: Montserrat;
@@ -270,13 +289,72 @@ header {
   font-style: normal;
   line-height: 40px; /* 125% */
 }
-.content .greetings .maincontent .blockmarket {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockWallet .coins {
+  margin-top: 60px;
+  width: 750px;
+  height: 20px;
+}
+.content .greetings .mainContent .blockWallet .textCoins {
+  width: 310px;
+  height: 24px;
+  margin-top: 24px;
+  display: flex;
+  color: #A3B8CC;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.content .greetings .mainContent .blockWallet .textCoins .numCoins {
+  color: #A3B8CC;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+}
+.content .greetings .mainContent .blockWallet .textCoins .nameProd {
+  margin: 0 5px;
+}
+.content .greetings .mainContent .blockWallet .addCoins {
+  width: 386px;
+  height: 32px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.content .greetings .mainContent .blockWallet .addCoins button {
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  border-bottom: 1px solid rgba(255, 127, 34, 0.5);
+  height: 24px;
+  color: #FF7F22;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.content .greetings .mainContent .blockWallet .addCoins input {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+.content .greetings .mainContent .blockWallet .addCoins .text {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.content .greetings .mainContent .blockMarket {
   width: 754px;
   height: 486px;
 }
-.content .greetings .maincontent .blockmarket h2 {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockMarket h2 {
   height: 40px;
   /* 1920/H2 */
   font-family: Montserrat;
@@ -284,33 +362,23 @@ header {
   font-style: normal;
   line-height: 40px; /* 125% */
 }
-.content .greetings .maincontent .blockmarket .products {
+.content .greetings .mainContent .blockMarket .products {
+  margin-top: 60px;
   height: 317px;
   display: grid;
   grid-template-columns: 236px 276px 236px;
 }
-.content .greetings .maincontent .blockmarket .products .bioarm {
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-.content .greetings .maincontent .blockmarket .products .microchip {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockMarket .products .microchip {
   margin: 0px 20px;
 }
-.content .greetings .maincontent .blockmarket .products .soul {
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-.content .greetings .maincontent .blockmarket .products img {
-  border: 1px solid rgba(255, 255, 255, 0);
-  height: 128px;
-}
-.content .greetings .maincontent .blockmarket .products .name {
+.content .greetings .mainContent .blockMarket .products .name {
   margin-top: 25px;
   text-align: center;
   font-family: Montserrat;
   font-size: 20px;
   line-height: 32px;
 }
-.content .greetings .maincontent .blockmarket .products .price {
+.content .greetings .mainContent .blockMarket .products .price {
   color: #A3B8CC;
   margin-top: 8px;
   text-align: center;
@@ -320,12 +388,10 @@ header {
   font-weight: 500;
   line-height: 24px; /* 150% */
 }
-.content .greetings .maincontent .blockstock {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockStock {
   height: 372px;
 }
-.content .greetings .maincontent .blockstock h2 {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockStock h2 {
   height: 40px;
   /* 1920/H2 */
   font-family: Montserrat;
@@ -333,22 +399,15 @@ header {
   font-style: normal;
   line-height: 40px; /* 125% */
 }
-.content .greetings .maincontent .blockstock .products {
+.content .greetings .mainContent .blockStock .products {
   height: 317px;
   display: grid;
   grid-template-columns: 236px 276px 236px;
 }
-.content .greetings .maincontent .blockstock .products .bioarm {
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-.content .greetings .maincontent .blockstock .products .microchip {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockStock .products .microchip {
   margin: 0px 20px;
 }
-.content .greetings .maincontent .blockstock .products .soul {
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-.content .greetings .maincontent .blockstock .products .name {
+.content .greetings .mainContent .blockStock .products .name {
   margin-top: 60px;
   text-align: center;
   font-family: Montserrat;
@@ -357,7 +416,7 @@ header {
   font-weight: 600;
   line-height: 32px;
 }
-.content .greetings .maincontent .blockstock .products .price {
+.content .greetings .mainContent .blockStock .products .price {
   margin-top: 5px;
   color: #A3B8CC;
   text-align: center;
@@ -367,7 +426,7 @@ header {
   font-weight: 500;
   line-height: 24px; /* 150% */
 }
-.content .greetings .maincontent .blockstock .products .quantity {
+.content .greetings .mainContent .blockStock .products .quantity {
   margin-top: 15px;
   text-align: center;
   font-family: Montserrat;
@@ -376,22 +435,47 @@ header {
   font-weight: 600;
   line-height: 24px; /* 120% */
 }
-.content .greetings .maincontent .blockproduction {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockProduction {
+  display: flex;
+  flex-wrap: wrap;
   height: 452px;
 }
-.content .greetings .maincontent .blockproduction div {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockProduction .title {
   height: 72px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
-.content .greetings .maincontent .blockproduction div h2 {
-  border: 1px solid rgba(255, 255, 255, 0);
+.content .greetings .mainContent .blockProduction .title h2 {
   height: 40px;
   /* 1920/H2 */
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
   line-height: 40px; /* 125% */
+}
+.content .greetings .mainContent .blockProduction .production {
+  min-height: 380px;
+  width: 482px;
+  margin-right: 38px;
+  display: grid;
+  grid-template-columns: 233px 249px;
+}
+.content .greetings .mainContent .blockProduction .production .radioBlock {
+  margin-top: 60px;
+  height: 164px;
+}
+.content .greetings .mainContent .blockProduction .production .configRob {
+  margin: 64px 0px 0px 27px;
+  height: 164px;
+}
+.content .greetings .mainContent .blockProduction .production .blockBy {
+  margin-bottom: 31px;
+  margin-top: 77px;
+  width: 455px;
+  display: flex;
+}
+.content .greetings .mainContent .blockProduction .production .blockBy .notifcation {
+  width: 195px;
+  margin-left: 24px;
 }/*# sourceMappingURL=style.css.map */
