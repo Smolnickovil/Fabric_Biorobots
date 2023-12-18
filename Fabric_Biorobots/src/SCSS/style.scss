@@ -1,5 +1,6 @@
 @import "buttons";
 @import "textStyle";
+@import "inputs";
 
 *{
     margin: 0;
@@ -179,32 +180,6 @@ header{
                         margin: 0 5px;
                     }
                 }
-
-                .addCoins{
-                    display: flex;
-                    align-items: center;
-
-                    input{
-                        margin-top: 40px;
-
-                        width: 32px;
-                        height: 32px;
-                        flex-shrink: 0;
-
-                        margin-left: 24px;
-                        margin-right: 8px
-                    }
-
-                    .text{
-                        margin-top: 40px;
-
-                        font-family: Montserrat;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 24px; /* 150% */
-                    }
-                }
             }
 
             .blockMarket{
@@ -290,55 +265,7 @@ header{
     
                         display: grid;
                         grid-template-columns: 233px 249px;
-    
-                       .radioBlock{
-                            @include radBl;
-                            margin-top: 60px;
-                            height: 20px + 112px + 32px;
-    
-                            display: flex;
-                            flex-wrap: wrap;
-                            align-content: space-between;                        
-
-                            .variable{
-                                display: flex;
-                                flex-wrap: wrap;
-
-                                height: 32px;
-                                margin-top: 16px;
-
-                                .var1{
-                                    display: flex;
-                                    align-items: center;
-                                    margin-right: 27px;
-                                }
-                                    
-                                .var2{
-                                    display: flex;
-                                    align-items: center;
-                                }    
-                                    
-                                input{
-                                    width: 32px;
-                                    height: 32px;
-                                        
-                                }
-
-                                p{
-                                    margin-left: 8px;
-
-                                    width: 63px;
-                                    font-family: Montserrat;
-                                    font-size: 12px;
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    line-height: 16px; /* 133.333% */
-                                }
-
-                            }
-
-                        }
-    
+        
                         .configRob{
                             margin: 64px 0px 0px 27px;
                             height: (48px * 3) + 32px;

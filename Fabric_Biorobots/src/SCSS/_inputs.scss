@@ -1,0 +1,167 @@
+.addCoins{
+    display: flex;
+    align-items: center;
+
+    // input{
+    //     margin-top: 40px;
+
+    //     width: 32px;
+    //     height: 32px;
+    //     flex-shrink: 0;
+
+    //     margin-left: 24px;
+    //     margin-right: 8px;
+    // }
+    >label{
+        width: 32px;
+        height: 32px;
+
+        position: relative; 
+        margin-left: 24px;
+        margin-right: 8px;
+        margin-top: 40px;
+
+        input[type=checkbox]{
+            position: absolute;
+            opacity: 0;
+            width:  0; 
+            height: 0;
+        }
+
+        span{
+            // img{
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            // padding: 0px;
+
+            // background:#22303d;
+            float: left;
+            background: url(/public/image/Input/checkButton.svg) no-repeat; 
+            background-position: -20px -20px;               
+        // border: 3px solid #A3B8CC;
+
+            // }
+        }
+
+        &:hover{
+            span{
+                background-position: -20px -72px;               
+            }
+        }
+
+        input:checked ~ span{
+            background-position: -20px -124px;               
+        }
+
+        &:disabled{
+            span{
+                background-position: -20px -176px;               
+            }
+        }
+    }
+
+    //------------------
+
+    .text{
+        margin-top: 40px;
+
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+    }
+}
+
+.radioBlock{
+    @include radBl;
+    margin-top: 60px;
+    height: 20px + 112px + 32px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;                        
+
+    .variable{
+        display: flex;
+        flex-wrap: wrap;
+
+        height: 32px;
+        margin-top: 16px;
+
+        .var1{
+            display: flex;
+            // display:block;
+            // position: relative;
+            align-items: center;
+            margin-right: 27px;
+        }
+            
+        .var2{
+            display: flex;
+            align-items: center;
+        }   
+        
+        label{
+            // display: block;
+            width: 32px;
+            height: 32px;
+            display:flex;
+            position: relative; /* to contain absolute elements */
+            cursor: pointer;
+
+            input[type=radio]{
+                // position: absolute;
+                opacity: 0;
+                width:  0; 
+                height: 0;
+            }    
+
+            span{
+                position: absolute;
+                top:0;
+                left:0;
+                width:32px; 
+                height:32px;
+                float: left;
+                background: url(/public/image/Input/radioButton.svg) no-repeat; 
+                background-position: -20px -20px;               
+            }
+
+            &:hover span {
+                background-position: -20px -72px;               
+            }
+
+            input:checked ~ span {
+                background-position: -20px -124px;               
+            }
+
+            input:checked ~ span:after {
+                display:block;
+            }
+
+            &:disabled{
+                span{
+                    background-position: -20px -176px;               
+                }
+            }
+        }
+
+        p{
+            margin-left: 8px;
+
+            width: 63px;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px; /* 133.333% */
+        }
+
+    }
+
+}
