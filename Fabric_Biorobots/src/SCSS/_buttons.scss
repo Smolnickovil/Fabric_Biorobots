@@ -1,14 +1,11 @@
 .createRob{
-    // float: right;
-    // white-space: nowrap;//отмена переноса текста
     display: flex;
     width: 236px;
     height: auto;
     padding: 12px 18px;
     justify-content: space-between;
     align-items: flex-start; 
-    background-color: #ff7e2200;
-                
+    background-color: #ff7e2200;               
 
     // перенести в отдельный файл где будут прописаны стили
     border-radius: 60px;
@@ -40,7 +37,34 @@
         border: #4C5865;
         color: #4C5865;
     }
+}
 
+.addCoinsBut{
+    margin-top: 40px;
+    background: #ffffff00;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 127, 34, 0.50);
+    height: 24px;
+
+    color: #FF7F22;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    
+    &:hover{
+        border-bottom: 1px solid #FF5722;
+        color: #FF5722;
+    }
+
+    &:active{
+        color: #FF7F22;
+    }
+
+    &:disabled{
+        color: #4C5865;
+    }
 }
 
 .installBut{
@@ -101,15 +125,14 @@
 
     &:hover{
         background: #7CDAF9;
-        border: 0px;
+        border: 2px solid #7CDAF9;
         color: #212529;
     }
 
     &:active{
         background-color: #4c586500;
         color: #22B3E3;
-        border: 2px solid #22B3E3;
-        
+        border: 2px solid #22B3E3;        
     }
 
     &:disabled{
@@ -128,7 +151,6 @@
     align-items: center; 
     background-color: #ff7e2200;
                 
-
     // перенести в отдельный файл где будут прописаны стили
     border-radius: 60px;
     border: 2px solid #FF7F22;
@@ -143,7 +165,7 @@
     color: #FFF;    
 
     &:hover{
-        border: #FF5722;
+        border: 2px solid #FF5722;
         background: #FF5722;
     }
 

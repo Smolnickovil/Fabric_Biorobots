@@ -1,0 +1,69 @@
+@mixin H2($heig: 40px){
+    h2{
+        /* 1920/H2 */
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        line-height: $heig; /* 125% */  
+    }
+}
+
+@mixin pageNav{
+    color: #667380;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 200% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;    
+
+}
+
+@mixin greyText($fWeig: 500){
+    color: #A3B8CC;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: $fWeig;
+    line-height: 24px;
+
+}
+
+@mixin price{
+    color: #A3B8CC;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */                    
+
+}
+
+@mixin notify{
+    color: #A3B8CC;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+}
+
+@mixin radBl{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+@mixin quan{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+}

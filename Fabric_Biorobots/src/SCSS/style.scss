@@ -1,0 +1,374 @@
+@import "buttons";
+@import "textStyle";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #fff;
+    height: 2467px;
+    background: radial-gradient(82.33% 70.44% at 50% 0%, #26394D 0%, #212529 100%);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 48px;
+    width: 1016px;
+    margin: 0px auto;
+    margin-top: 48px;
+}
+
+
+.content{
+    width: 1016px;
+    height: 2371px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+
+    .pageNum{
+        margin-top: 144px;
+        display: flex;
+        flex-direction: column;
+
+        .num{
+            @include pageNav;
+
+            width: 24px;
+            height: 24px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .text{
+            @include pageNav;
+
+            width: 24px;
+            height: 80px;
+            margin-top:114px; 
+
+            display: flex;
+            writing-mode:vertical-rl;
+            transform: rotateY(180deg) rotateX(180deg);// 
+        }
+
+        .symbol{
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+
+        .two{
+            margin-top: 131px;
+        }
+        
+        .three{
+            margin-top: 316px;
+        }
+
+        .four{
+            margin-top: 462px;
+        }
+
+        .five{
+            margin-top: 364px;
+        }   
+    }
+
+
+    .greetings{
+        margin-top: 96px;
+        margin-left: 106px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        height: 320px + 1955px;
+        width: 470px + 50px + 366px;
+
+        .title{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            max-width: 100%;
+            margin-bottom: 100px;
+
+            .mainText{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                max-width: 470px;
+
+                h1{
+                    margin: 24px  0px;
+                    /* 1920 / H1 */
+                    font-family: Montserrat;
+                    font-size: 56px;
+                    font-style: normal;
+                    line-height: 72px; /* 128.571% */
+                }
+    
+                p{  
+                    @include greyText(600);    
+  
+                    margin-bottom: 24px;
+                }   
+            }
+    
+            .windRobots{    
+                width: 366px;
+                height: 320px;
+                flex-shrink: 0;
+                display: flex;
+    
+                .circle{
+                    width: 275px;
+                    height: 275px;
+                    flex-shrink: 0;
+                    margin: 4px 60px 41px 31px;
+        
+                    border-radius: 275px;
+                    background: #1E2936;
+                }
+                .robots1{
+                    position: absolute;
+                    margin-left: 0px;
+                }
+    
+                .robots2{
+                    position: absolute;
+                    margin-left:20px + 176px;
+                    margin-top: 102px;
+                    
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+
+        .mainContent{
+
+            .blockWallet{
+                @include H2;
+                margin-bottom: 96px;
+                
+                >img{
+                    margin-top: 60px;
+                    height: 20px;
+                }
+
+                .textCoins{
+                    @include greyText;    
+
+                    width: 310px;
+                    height: 24px;
+                    margin-top: 24px;
+
+                    display: flex;
+
+                    .numCoins{
+                        @include greyText(700);    
+                    }
+                    .nameProd{
+                        margin: 0 5px;
+                    }
+                }
+
+                .addCoins{
+                    display: flex;
+                    align-items: center;
+
+                    input{
+                        margin-top: 40px;
+
+                        width: 32px;
+                        height: 32px;
+                        flex-shrink: 0;
+
+                        margin-left: 24px;
+                        margin-right: 8px
+                    }
+
+                    .text{
+                        margin-top: 40px;
+
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px; /* 150% */
+                    }
+                }
+            }
+
+            .blockMarket{
+                @include H2;
+
+                width: 754px;
+                margin-bottom: 100px;
+
+                .products{
+                    margin-top: 60px;
+                    display: grid;
+                    grid-template-columns: 236px 276px 236px;
+
+                    .microchip{
+                        margin: 0px 20px;
+                    }
+
+                    .name{
+                        margin-top: 25px;
+
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 32px;  
+                    }
+
+                    .price{
+                        @include price;
+                        margin-top: 5px;
+                        margin-bottom: 24px;
+                    }
+    
+                }
+            }
+
+            .blockStock{
+                @include H2;
+                margin-bottom: 96px;
+
+                .products{
+                    margin-top: 60px;
+
+                    display: grid;
+                    grid-template-columns: 236px 276px 236px;
+
+                    .microchip{
+                        margin: 0px 20px;
+                    }
+
+                    .name{
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 32px;  
+                    }
+
+                    .price{
+                        @include price;
+                        margin-top: 5px;                        
+                    }
+    
+                    .quantity{
+                        @include quan;
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            .blockProduction{
+                @include H2(72px);
+
+                .prodPrev{
+                    display: flex;
+                    flex-wrap: wrap-reverse;
+
+                    .production{
+                        min-height: 380px;
+                        width: 300px + 48px + 134px;
+                        margin-right: 38px;
+    
+                        display: grid;
+                        grid-template-columns: 233px 249px;
+    
+                       .radioBlock{
+                            @include radBl;
+                            margin-top: 60px;
+                            height: 20px + 112px + 32px;
+    
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: space-between;                        
+
+                            .variable{
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                height: 32px;
+                                margin-top: 16px;
+
+                                .var1{
+                                    display: flex;
+                                    align-items: center;
+                                    margin-right: 27px;
+                                }
+                                    
+                                .var2{
+                                    display: flex;
+                                    align-items: center;
+                                }    
+                                    
+                                input{
+                                    width: 32px;
+                                    height: 32px;
+                                        
+                                }
+
+                                p{
+                                    margin-left: 8px;
+
+                                    width: 63px;
+                                    font-family: Montserrat;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 16px; /* 133.333% */
+                                }
+
+                            }
+
+                        }
+    
+                        .configRob{
+                            margin: 64px 0px 0px 27px;
+                            height: (48px * 3) + 32px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                        }
+    
+                        .blockBy{
+                            width: 195px + 24px + 236px;
+                            margin-bottom: 31px;
+                            margin-top: 77px;
+        
+                            display: flex;
+    
+                            .notification{
+                                @include notify;
+                                width: 195px;
+                                margin-left: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+    
