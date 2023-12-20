@@ -1,12 +1,13 @@
 @mixin H2($heig: 40px){
     h2{
+        // width: 754px;
         /* 1920/H2 */
         font-family: Montserrat;
-        font-size: 32px;
-        font-style: normal;
-        line-height: $heig; /* 125% */  
+        font-size: 34px;
+        // font-style: normal;
+        // font-weight: 600;
+        line-height: $heig; /* 125% */    }
     }
-}
 
 @mixin pageNav{
     color: #667380;
@@ -38,8 +39,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 150% */                    
-
+    line-height: 24px; 
 }
 
 @mixin notify{
@@ -66,4 +66,22 @@
     font-style: normal;
     font-weight: 600;
     line-height: 24px; /* 120% */
+}
+
+@mixin variab{
+    
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
+
+@mixin creatBioBut{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFF;    
 }

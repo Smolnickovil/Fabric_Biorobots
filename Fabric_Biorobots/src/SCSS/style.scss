@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 @import "buttons";
 @import "textStyle";
 @import "inputs";
@@ -196,7 +197,15 @@ header{
                     .microchip{
                         margin: 0px 20px;
                     }
-
+                    
+                    // img{
+                    //     div{
+                    //         height: 1px;
+                    //         width: 1px;
+                    //         box-shadow: 0 0 20px #fff;
+                    //     }
+                    // }
+                
                     .name{
                         margin-top: 25px;
 
@@ -288,6 +297,14 @@ header{
                             }
                         }
                     }
+
+                    // .image{
+                    //     width: 236px;
+                    //     height: 320px;
+                    //     background: url(/public/image/sprait_BioRob/robots.png) no-repeat;
+                    //     background-position: -246px -330px;
+                    //     background-size: (236px * 4) (320px * 3);
+                    // }
                 }
             }
         }

@@ -87,6 +87,7 @@
     align-content: space-between;                        
 
     .variable{
+        @include variab;
         display: flex;
         flex-wrap: wrap;
 
