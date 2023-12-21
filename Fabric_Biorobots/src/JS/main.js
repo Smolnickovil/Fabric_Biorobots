@@ -14,7 +14,6 @@ let editButContent;
 let contentPrEl;
 
 //Изменение кнопки продажи
-// let sellPriceElment;
 let editSellBut;
 let editSellButConten;
 let quentityProductSell;
@@ -64,43 +63,7 @@ function updateCoins (coinQuen){
         );
       }
     }
-  }
-  
-
-// function updateCoins (coinQuen){
-//     for(let i = 1; i <= 3; i++){
-//         priceElement = document.querySelector(`#pr${i}`);
-//         editInstallBut = document.querySelector(`#inst${i}`);
-            
-//         contentPrEl = +priceElement.textContent;
-//         contentQuentProd = +quentityProductSell.textContent;
-    
-//         if(coinQuen < contentPrEl){//если денег меньше чем цена, кнопка disabled
-//           editInstallBut.setAttribute('disabled', '');//делает кнопку неактивной setAtribut прописывает параметры в элемент
-//         } else{
-//           editInstallBut.removeAttribute('disabled');//делает кнопку неактивной setAtribut прописывает параметры в элемент
-//         }
-        
-//         if(contentQuentProd <= 0){
-//             editSellBut.setAttribute('disabled', '');
-//           } else{
-//             editSellBut.removeAttribute('disabled');
-//           }      
-//     }
-    
-//     for(let i = 0; i<= coinQuen; i++){//цикл интерактивно показывающий количество монет
-//         if(i == 0){
-//         imageCoins.innerHTML = `
-//         `;
-//         } else {
-//             imageCoins.insertAdjacentHTML(
-//                 'beforeend',
-//                 `<img style = "margin-left: ${7 * i}px;  z-index: ${2-i};" class="money n${i}"  src="public/image/money.png" alt="">
-//                 `
-//             );
-//         }
-//     }
-// }
+  } 
 
 function addCoinsBut() {
     if(isChecked == true){
@@ -133,7 +96,6 @@ function inpCheck() { //функции checbox
   
     //Здесь будем прибавлять на склад товар
     addStock(price,   nCoins.textContent);
-    // updateCoins(nCoins.textContent);
   }
 
   function addStock(priceBy, nCoins) {//добавление товара в склад
