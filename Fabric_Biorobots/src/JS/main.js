@@ -1,20 +1,31 @@
 'use strict'
 
-// const bodyElement = document.body;
-// const childNodes = bodyElement.childNodes;
-// console.log(childNodes);
+const nCoins = document.querySelector('.numCoins');//-------Вывод монет числом
+const quentityCoins = nCoins.textContent;
+const imageCoins = document.querySelector('.coins');//------Вывод монет картинкой
+const addCoins = imageCoins.innerHTML;
 
-// const bodyChildren = bodyElement.children;
-// console.log(bodyChildren);
+if(nCoins.textContent == ''){
+    nCoins.textContent = 0;
+}
 
-// // поиск по классу 
-// const inputElemetCheck = document.querySelectorAll('.addCoins');
-// console.log(inputElemetCheck);
+function updateCoins (coinQuen){
+  
+  
+    for(let i = 0; i<= coinQuen; i++){//цикл интерактивно показывающий количество монет
+      if(i == 0){
+        imageCoins.innerHTML = `
+        `;
+      } else {
+        imageCoins.insertAdjacentHTML(
+          'beforeend',
+          `<img style = "margin-left: ${7 * i}px;  z-index: ${2-i};" class="money n${i}"  src="public/image/money.png" alt="">
+          `
+        );
+      }
+    }
+  }
 
-// const buttonEditAdd = document.querySelector('installBut');
-// console.log(buttonEditAdd);
+  updateCoins(quentityCoins);
 
-// const textBut = buttonEditAdd.innerHTML;
-// console.log(textBut);
-
-// buttonEditAdd.innerHTML = 'Insall';
+  
