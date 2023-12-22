@@ -1,6 +1,7 @@
 .addCoins{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     // input{
     //     margin-top: 40px;
@@ -19,7 +20,7 @@
         position: relative; 
         margin-left: 24px;
         margin-right: 8px;
-        margin-top: 40px;
+        margin-top: 38px;
 
         input[type=checkbox]{
             position: absolute;
@@ -79,12 +80,14 @@
 
 .radioBlock{
     @include radBl;
-    margin-top: 60px;
-    height: 20px + 112px + 32px;
+    // margin-top: 60px;
+    margin-right: 27px;
+    // padding-bottom: 236px;
+    // height: 20px + 112px + 32px;
 
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;                        
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-content: space-between;                        
 
     .variable{
         @include variab;
@@ -93,6 +96,7 @@
 
         height: 32px;
         margin-top: 16px;
+        margin-bottom: 30px;
 
         .var1{
             display: flex;

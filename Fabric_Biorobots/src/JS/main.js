@@ -20,7 +20,6 @@ let quentityProductSell;
 let contentQuentProd;
 
 
-
 if(nCoins.textContent == ''){
     nCoins.textContent = 0;
 }
@@ -28,42 +27,47 @@ if(nCoins.textContent == ''){
 function updateCoins (coinQuen){
     // console.log(coinQue);
     for(let i = 1; i <= 3; i++){
-      priceElement = document.querySelector(`#pr${i}`);
-      editInstallBut = document.querySelector(`#inst${i}`);
-  
-      quentityProductSell = document.querySelector(`#quent${i}`);
-      editSellBut = document.querySelector(`#sell${i}`)
-      // editButContent = editInstallBut.outerHTML;
-      contentPrEl = +priceElement.textContent;
-      contentQuentProd = +quentityProductSell.textContent;
-      // console.log(contentPrEl);
-  
-      if(coinQuen < contentPrEl){//если денег меньше чем цена, кнопка disabled
+        priceElement = document.querySelector(`#pr${i}`);
+        editInstallBut = document.querySelector(`#inst${i}`);
+
+        quentityProductSell = document.querySelector(`#quent${i}`);
+        editSellBut = document.querySelector(`#sell${i}`)
+        // editButContent = editInstallBut.outerHTML;
+        contentPrEl = +priceElement.textContent;
+        contentQuentProd = +quentityProductSell.textContent;
+        // console.log(contentPrEl);
+
+        if(coinQuen < contentPrEl){//если денег меньше чем цена, кнопка disabled
         editInstallBut.setAttribute('disabled', '');//делает кнопку неактивной setAtribut прописывает параметры в элемент
-      } else{
+        } else{
         editInstallBut.removeAttribute('disabled');//делает кнопку неактивной setAtribut прописывает параметры в элемент
-      }
-  
-      if(contentQuentProd <= 0){
+        }
+
+        if(contentQuentProd <= 0){
         editSellBut.setAttribute('disabled', '');
-      } else{
+        } else{
         editSellBut.removeAttribute('disabled');
-      }
+        }
     }
-  
+
     for(let i = 0; i <= coinQuen; i++){//цикл интерактивно показывающий количество монет
-      if(i == 0){
+        if(i == 0){
         imageCoins.innerHTML = `
         `;
-      } else {
-        imageCoins.insertAdjacentHTML(
-          'beforeend',
-          `<img style = "margin-left: ${7 * i}px;  z-index: ${2-i};" class="money n${i}"  src="public/image/money.png" alt="">
-          `
-        );
-      }
+        } else {
+            imageCoins.insertAdjacentHTML(
+                'beforeend',
+                `<img style = "margin-left: ${7 * i}px;  z-index: ${2-i};" class="money n${i}"  src="public/image/Money/money.png" alt="">
+                `
+            );
+        }
     }
-  } 
+} 
+
+function closeWind(){
+    document.getElementsByClassName('upWind')[0].style.display = 'none';
+
+}
 
 function addCoinsBut() {
     if(isChecked == true){
@@ -71,7 +75,8 @@ function addCoinsBut() {
         for(let i = 1; i <= 4; i++){
           nCoins.textContent = (+nCoins.textContent) + 100 - (+nCoins.textContent);
         }
-  
+
+        document.getElementsByClassName('upWind')[0].style.display = 'flex';
         console.log('слишком много денег, больше 100 нельзя');
   
       } else {
@@ -116,32 +121,46 @@ function inpCheck() { //функции checbox
 
   //функции кнопки продать
 function sellBut(sBut) {
-  const sellPrice = +sBut.dataset.price;
+  const byPrice = +sBut.dataset.price;
+  let sellPrice;
+ 
 
-  switch (sellPrice) {
+  switch (byPrice) {
     case 7:
       quentityProductSell = document.querySelector('#quent1');
+      sellPrice = 5;
       break;
     case 5:
       quentityProductSell = document.querySelector('#quent2');
+      sellPrice = 3;
     break;
     case 25:
       quentityProductSell = document.querySelector('#quent3');
+      sellPrice = 15;
       break;
   }
 
-  // if((+nCoins.textContent) >= 94){
-  //   if(sellPrice == 7) console.log('вы не можете продать этот товар, больше 100 монет получить нельзя');
+  console.log(byPrice);
+  console.log(sellPrice);
 
-  //   if((+nCoins.textContent) >= 100) console.log('слишком много денег, больше 100 нельзя');
-  
-  // } else {
+  if((+nCoins.textContent) >= 100){
+    document.getElementsByClassName('upWind')[0].style.display = 'flex';
+    console.log('слишком много денег, больше 100 нельзя');
+
+  } else {
     quentityProductSell.textContent = +(quentityProductSell.textContent) -1;
 
+    if((+nCoins.textContent) >= 86) {
+        nCoins.textContent = (+nCoins.textContent) + (100 - (+nCoins.textContent)); //price;
+        
+        document.getElementsByClassName('upWind')[0].style.display = 'flex';
+        console.log('слишком много денег, больше 100 нельзя');
+    }else{
     // console.log(quentityProductSell.textContent);
-    nCoins.textContent = (+nCoins.textContent) +sellPrice; //price;
-  // }
-
+        nCoins.textContent = (+nCoins.textContent) + sellPrice; //price;
+    }
+  }
+//   console.log(byPrice >= 86); 
   updateCoins(nCoins.textContent);
 }
 

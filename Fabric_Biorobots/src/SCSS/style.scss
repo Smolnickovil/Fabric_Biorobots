@@ -3,6 +3,74 @@
 @import "textStyle";
 @import "inputs";
 
+@media screen and (max-width: 1024px) {
+    .createRob{
+        margin-left: 442px;              
+
+    }
+
+    .pageNum{
+        visibility: hidden;
+    }
+
+    .mainText{
+        width: 496px;
+    }
+
+    .windRobots{ 
+        margin-left: 20px;   
+        flex-shrink: 0;
+        display: flex;
+
+        .robots1{
+            position: absolute;
+            margin-left: 0px;
+            width: 113px;
+            height: 199px;
+
+        }
+
+        .robots2{
+            position: absolute;
+            margin-left:196px;
+            margin-top: 102px;
+            // width: 138px;
+            // height: 195px;
+
+            
+            transform: rotateY(180deg);
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .createRob{
+        margin-left: 182px;           
+
+    }
+
+    .mainText{
+        width: 259px;
+
+        // h1{
+        //     font-size: 48px;
+        //     line-height: 56px;
+        //     margin: 0px 0px 0px 24px;
+        // }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header{
+        img{
+            display: none;
+        }
+    }
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -11,27 +79,74 @@
 
 body{
     color: #fff;
-    height: 2467px;
+    // height: 2467px;
     background: radial-gradient(82.33% 70.44% at 50% 0%, #26394D 0%, #212529 100%);
+}
+
+.upWind{
+    display: none;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: #1e2936ca;
+
+    >div{
+        @include upWindText;
+        background-color: #fff;
+        border-radius: 10px;
+
+        display: flex;
+        padding: 8px 8px  40px 34px;
+        // position: relative;
+
+        img{
+            width: 43px;
+            height: 52px;
+            margin-top: 25px;
+        }
+        .textQue{
+            display: grid;
+            grid-template-columns: 1fr;
+            // padding-left: 29px;
+            // padding-right: 62px;
+            padding: 25px 62px 0px 29px;
+        }
+    }
 }
 
 header{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 48px;
-    width: 1016px;
-    margin: 0px auto;
-    margin-top: 48px;
+    justify-content: center;
+    // width: 100%;
+    // height: 48px;
+    max-width: 1016px;
+    margin: 48px auto 0px;
+    // margin-top: 48px;
+
+    // >div{
+    //     // max-width: 78px;
+    //     // max-height: 48px;
+    //     background-image: url('public/image/Pacman.svg');
+    // }
 }
 
 
 .content{
-    width: 1016px;
-    height: 2371px;
+    max-width: 1016px;
+    // height: 2371px;
     margin: 0px auto;
+    // display: grid;
+    // grid-template-columns: 1ft 1ft 1ft;
+
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    // justify-content: center;
 
     .pageNum{
         margin-top: 144px;
@@ -41,8 +156,8 @@ header{
         .num{
             @include pageNav;
 
-            width: 24px;
-            height: 24px;
+            // width: 24px;
+            // height: 24px;
 
             display: flex;
             flex-direction: column;
@@ -53,9 +168,9 @@ header{
         .text{
             @include pageNav;
 
-            width: 24px;
-            height: 80px;
-            margin-top:114px; 
+            // width: 24px;
+            // height: 80px;
+            margin-top:123px; 
 
             display: flex;
             writing-mode:vertical-rl;
@@ -63,8 +178,8 @@ header{
         }
 
         .symbol{
-            width: 24px;
-            height: 24px;
+            // width: 24px;
+            // height: 24px;
             flex-shrink: 0;
             margin-top: 8px;
         }
@@ -88,24 +203,27 @@ header{
 
 
     .greetings{
-        margin-top: 96px;
-        margin-left: 106px;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        height: 320px + 1955px;
-        width: 470px + 50px + 366px;
+    //     border: 1px solid #fff;
 
-        .title{
+        padding: 96px 0px 0px 106px;
+        // margin-top: 96px;
+        // margin-left: 106px;
+            // display: flex;
+            // flex-wrap: wrap;
+        // align-content: flex-start;
+        // height: 320px + 1955px;
+        // width: 470px + 50px + 366px;
+
+        .mainPage{
             display: flex;
             flex-wrap: wrap-reverse;
-            max-width: 100%;
+            // max-width: 100%;
             margin-bottom: 100px;
 
             .mainText{
-                display: flex;
-                flex-wrap: wrap;
-                align-content: flex-start;
+                // display: flex;
+                // flex-wrap: wrap;
+                // align-items: flex-start;
                 max-width: 470px;
 
                 h1{
@@ -119,20 +237,21 @@ header{
     
                 p{  
                     @include greyText(600);    
-  
-                    margin-bottom: 24px;
                 }   
             }
     
-            .windRobots{    
-                width: 366px;
-                height: 320px;
+            .windRobots{ 
+                margin-left: 50px;   
+                // width: 366px;
+                // height: 320px;
+                // position: relative;
                 flex-shrink: 0;
                 display: flex;
     
                 .circle{
                     width: 275px;
                     height: 275px;
+
                     flex-shrink: 0;
                     margin: 4px 60px 41px 31px;
         
@@ -154,12 +273,11 @@ header{
             }
         }
 
-        .mainContent{
+        // .mainContent{
 
             .blockWallet{
                 @include H2;
                 margin-bottom: 96px;
-                
                 // >img{
                 //     margin-top: 60px;
                 //     height: 20px;
@@ -172,7 +290,7 @@ header{
                     position: relative;
                     // width: 7px * 100;
                     height: 20px;
-                    width: 1016px;
+                    // width: 1016px;
                     margin-bottom: 24px;
                     // display: flex;
                     .money{
@@ -186,9 +304,9 @@ header{
                 .textCoins{
                     @include greyText;    
 
-                    width: 310px;
-                    height: 24px;
-                    margin-top: 24px;
+                    // width: 310px;
+                    // height: 24px;
+                    // margin-top: 24px;
 
                     display: flex;
 
@@ -204,19 +322,23 @@ header{
             .blockMarket{
                 @include H2;
 
-                width: 754px;
-                margin-bottom: 100px;
+                // width: 754px;
+                padding-bottom: 100px;
 
                 .products{
-                    margin-top: 60px;
-                    display: grid;
-                    grid-template-columns: 236px 276px 236px;
+                    // padding-top: 60px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    // grid-template-columns: 236px 276px 236px;
 
-                    .microchip{
-                        margin: 0px 20px;
-                    }
+                    // .microchip{
+                    //     margin: 0px 20px;
+                    // }
                     
-                    // img{
+                    img{
+                        margin-top: 60px;
+                    }
                     //     div{
                     //         height: 1px;
                     //         width: 1px;
@@ -251,17 +373,19 @@ header{
 
             .blockStock{
                 @include H2;
-                margin-bottom: 96px;
+                padding-bottom: 96px;
 
                 .products{
                     margin-top: 60px;
 
-                    display: grid;
-                    grid-template-columns: 236px 276px 236px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    // grid-template-columns: 236px 276px 236px;
 
-                    .microchip{
-                        margin: 0px 20px;
-                    }
+                    // .microchip{
+                    //     margin: 0px 20px;
+                    // }
 
                     .name{
                         text-align: center;
@@ -288,21 +412,28 @@ header{
 
             .blockProduction{
                 @include H2(72px);
+                padding-bottom: 236px;
 
                 .prodPrev{
                     display: flex;
+                    // align-items:center;
                     flex-wrap: wrap-reverse;
 
                     .production{
-                        min-height: 380px;
-                        width: 300px + 48px + 134px;
-                        margin-right: 38px;
-    
-                        display: grid;
-                        grid-template-columns: 233px 249px;
+                        // min-height: 380px;
+                        // width: 300px + 48px + 134px;
+                        // margin-right: 38px;
+                        margin-top: 40px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        max-width: 482px;
+
+                        // grid-template-columns: 233px 249px;
         
                         .configRob{
-                            margin: 64px 0px 0px 27px;
+                            width: (48px * 4) + 30px;
+                            // margin: 64px 0px 0px 0px;
+                            // padding: 64px 0px 0px 27px;
                             height: (48px * 3) + 32px;
                             display: flex;
                             flex-wrap: wrap;
@@ -310,16 +441,19 @@ header{
                         }
     
                         .blockBy{
-                            width: 195px + 24px + 236px;
-                            margin-bottom: 31px;
-                            margin-top: 77px;
+                            // width: 195px + 24px + 236px;
+                            // margin-bottom: 31px;
+                            // max-margin-top: 40px;
         
                             display: flex;
+                            flex-wrap: wrap-reverse;
+                            // display: inline-block;
     
                             .notification{
                                 @include notify;
                                 width: 195px;
                                 margin-left: 24px;
+                                margin-top: 20px;
                             }
                         }
                     }
@@ -333,7 +467,7 @@ header{
                     // }
                 }
             }
-        }
+        // }
     }
 }
 

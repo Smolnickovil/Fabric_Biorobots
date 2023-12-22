@@ -85,3 +85,30 @@
     line-height: 24px;
     color: #FFF;    
 }
+
+@mixin upWindText{
+    color: #4C5865;
+
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+
+    h3{
+        width: 320px;
+
+        color: #212529;
+
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 40px;
+    }
+    
+    p{
+        width: 306px;
+        padding-top: 23px;
+    }
+
+}
