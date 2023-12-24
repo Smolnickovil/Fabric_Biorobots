@@ -22,195 +22,27 @@ let contentQuentProd;
 let addStockQuent;
 
 //Изменение иконок запчастей при сборки робота
-
 let sumSp = 0;
 let detailsActiveArm;
 let detailsActiveChip;
 let detailsActiveSoul;
 
-// console.log(quentProdS);
-// productSelection();
-function productSelection() {
-    let quentProdSellArm;
-    let quentProdSellChip;
-    let quentProdSellSoul;
+function updateData (coinQuen, addStockProd){
 
-    let checkDetailsStatArm;
-    let checkImageDitailsArm;
-    let checkDetailsStatChip;
-    let checkImageDitailsChip;
-    let checkDetailsStatSoul;
-    let checkImageDitailsSoul;
-
-
-    // for(let i = 1; i <= 3; i++){
-        quentProdSellArm = document.querySelector(`#quent1`).textContent;
-        armProduction(quentProdSellArm, checkDetailsStatArm, checkImageDitailsArm);
-
-        quentProdSellChip = document.querySelector(`#quent2`).textContent;
-        chipProduction(quentProdSellChip, checkDetailsStatChip, checkImageDitailsChip);
-
-        quentProdSellSoul = document.querySelector(`#quent3`).textContent;
-
-        checkDetailsStatSoul = document.querySelector('#ch9');
-        checkImageDitailsSoul = document.querySelector('#oneis9');
-
-        if(quentProdSellSoul >= 1){
-                checkDetailsStatSoul.removeAttribute('disabled');
-                checkImageDitailsSoul.classList.remove('sp3Dis');
-                // console.log('arm');
-        } else {
-            checkDetailsStatSoul.setAttribute('disabled', '');
-            checkImageDitailsSoul.classList.add('sp3Dis');
-        }
-
-    // if(addStockArm) {
-    //     quentProdSellArm = addStockArm;
-    //     armProduction(quentProdSellArm);
-    //     console.log(quentProdSellArm);
-    // }
-    // console.log(quentProdSellArm);
-
-    // console.log(addStockArm);
-
-        //---------------------вывоит колличество активированных 
-        detailsActiveArm = 0;
-        detailsActiveChip = 0;
-        detailsActiveSoul = 0;
-
-        for(let i = 1; i <= 9; i++){
-            if(i <= 4) {
-                detailsActiveArm += (+document.querySelector(`#ch${i}`).checked);
-                // console.log('arm')
-            } else if (i > 4 && i <= 8) {
-                detailsActiveChip += (+document.querySelector(`#ch${i}`).checked);
-                // console.log('chip')
-            } else {
-                detailsActiveSoul += (+document.querySelector(`#ch${i}`).checked);
-            }
-        }
-        console.log(detailsActiveArm, detailsActiveChip, detailsActiveSoul);
-        //-----------------------
-    
-    // updateCoins(nCoins.textContent);
-}
-
-function armProduction (quentProdSell, checkDetailsStatArm, checkImageDitailsArm){
-    console.log('arm'+quentProdSell);
-
-    if(((+quentProdSell) < 4)){ 
-        sumSp = (4 - (+quentProdSell));
-
-            for(let i = 1; i <= 4; i++){
-                checkDetailsStatArm = document.querySelector(`#ch${i}`);
-                checkImageDitailsArm = document.querySelector(`#oneis${i}`);
-
-                if(checkImageDitailsArm.classList.contains('sp1Dis')){
-                    checkDetailsStatArm.removeAttribute('disabled');
-                    checkImageDitailsArm.classList.remove('sp1Dis');
-                    // console.log('arm');
-                }
-            }
-
-            for(let i = 4; i > (+quentProdSell); i--){
-            checkDetailsStatArm = document.querySelector(`#ch${i}`);
-            // console.log(sp);
-            // checkImageDitails = document.querySelector(`#oneis${a}`).style.display = 'none';
-            checkImageDitailsArm = document.querySelector(`#oneis${i}`);
-                
-            checkDetailsStatArm.setAttribute('disabled', '');
-            checkImageDitailsArm.classList.add('sp1Dis');
-            // if(checkImageDitails.classList.contains('sp1Dis')) console.log(checkImageDitails);
-            // console.log(checkImageDitails);
-        }
-
-    } else {
-        for(let i = 1; i <= 4; i++){
-            checkDetailsStatArm = document.querySelector(`#ch${i}`);
-            checkImageDitailsArm = document.querySelector(`#oneis${i}`);
-
-            if(checkImageDitailsArm.classList.contains('sp1Dis')){
-                checkDetailsStatArm.removeAttribute('disabled');
-                checkImageDitailsArm.classList.remove('sp1Dis');
-            }
-            // console.log(document.querySelector('#ch1').checked);
-        }
-    }
-
-}
-
-function chipProduction (quentProdSell, checkDetailsStatChip, checkImageDitailsChip){
-    console.log('chip'+quentProdSell);
-
-    if(((+quentProdSell) < 4)){ 
-        sumSp = (4 - (+quentProdSell));
-
-        for(let i = 5; i <= 8; i++){
-            checkDetailsStatChip = document.querySelector(`#ch${i}`);
-            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
-
-            if(checkImageDitailsChip.classList.contains('sp2Dis')){
-                checkDetailsStatChip.removeAttribute('disabled');
-                checkImageDitailsChip.classList.remove('sp2Dis');
-                // console.log('chip');
-            }
-        }
-
-        for(let i = 8; i > ((+quentProdSell) + 4); i--){
-            checkDetailsStatChip = document.querySelector(`#ch${i}`);
-            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
-
-            checkImageDitailsChip.classList.add('sp2Dis');
-            checkDetailsStatChip.setAttribute('disabled', '');
-            // if(checkImageDitails.classList.contains('sp1Dis')) console.log(checkImageDitails);
-            // console.log(checkImageDitails);
-        }
-
-
-    } else {
-        for(let i = 8; i >= 5; i--){
-            checkDetailsStatChip = document.querySelector(`#ch${i}`);
-            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
-
-            if(checkImageDitailsChip.classList.contains('sp2Dis')){
-                checkDetailsStatChip.removeAttribute('disabled');
-                checkImageDitailsChip.classList.remove('sp2Dis');
-            }
-            // console.log(document.querySelector('#ch1').checked);
-        }
-    }
-
-}
-
-// for(let i = 1; i <= 4; i++){
-//     sp = document.querySelector(`#ch${i}`);
-//     spp = sp.checked;
-    
-// }
-// que -= (4 - (+sumSp));
-// console.log(que);
-//------------------------
-
-if(nCoins.textContent == ''){
-    nCoins.textContent = 0;
-};
-
-function updateCoins (coinQuen, addStockProd){
     for(let i = 1; i <= 3; i++){
         priceElement = document.querySelector(`#pr${i}`);
         editInstallBut = document.querySelector(`#inst${i}`);
 
         quentityProductSell = document.querySelector(`#quent${i}`);
         editSellBut = document.querySelector(`#sell${i}`)
-        // editButContent = editInstallBut.outerHTML;
+
         contentPrEl = +priceElement.textContent;
         contentQuentProd = +quentityProductSell.textContent;
-        // console.log(contentPrEl);
 
         if(coinQuen < contentPrEl){//если денег меньше чем цена, кнопка disabled
         editInstallBut.setAttribute('disabled', '');//делает кнопку неактивной setAtribut прописывает параметры в элемент
         } else {
-        editInstallBut.removeAttribute('disabled');//делает кнопку неактивной setAtribut прописывает параметры в элемент
+        editInstallBut.removeAttribute('disabled');//делает кнопку активной прописывает параметры в элемент
         };
 
         if(contentQuentProd <= 0){
@@ -232,8 +64,6 @@ function updateCoins (coinQuen, addStockProd){
             );
         };
     }
-
-    productSelection(); 
 }
 
 function radioinput(){
@@ -265,12 +95,16 @@ function radioinput(){
                 robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/2.svg" alt="">`;
             };
         };
-
-    updateCoins(nCoins.textContent);
+    productSelection();
+    updateData(nCoins.textContent);
 }
 
 function closeWind(){
     document.getElementsByClassName('upWind')[0].style.display = 'none';
+}
+
+function closeGoodCreat(){
+    document.getElementsByClassName('upGoodCreat')[0].style.display = 'none';
 }
 
 function addCoinsBut() {
@@ -287,23 +121,23 @@ function addCoinsBut() {
         nCoins.textContent = (+nCoins.textContent) + 5; //price;
       };
     };
-    updateCoins(nCoins.textContent);
+    updateData(nCoins.textContent);
 }  
 
-function inpCheck() { //функции checbox
+function inpCheck() { //функция checbox
     if(isChecked == false){
       isChecked = true;
     } else if (isChecked == true){
       isChecked = false;
     };
-    updateCoins(nCoins.textContent);
+    updateData(nCoins.textContent);
   }
   
   function byPr(id) {//покупка
     const price = id.dataset.price;
     nCoins.textContent -= price; //price;
   
-    addStock(price,   nCoins.textContent);//Здесь будем прибавлять на склад товар
+    addStock(price, nCoins.textContent);//Здесь будем прибавлять на склад товар
   }
 
   function addStock(priceBy, nCoins) {//добавление товара в склад
@@ -315,22 +149,14 @@ function inpCheck() { //функции checbox
       
       if((+priceBy) == (+butSel.dataset.price)){
         addStockQuent.textContent = (+addStockQuent.textContent) + 1;
-        //-------
-        // productSelection(nCoins, addStockQuent.textContent);
-        // if(addStockQuent = document.querySelector(`#quent1`)){
-            updateCoins(nCoins); 
-        // }        
-        // console.log((+addStockQuent.textContent));
-        //---------
+        productSelection();
+        updateData(nCoins); 
       };
     }
-    //--------------
-    // productSelection(nCoins, (+addStockQuent.textContent));
-    //--------------
 
   }
 
-  //функции кнопки продать
+//функция кнопки продать
 function sellBut(sBut) {
   const byPrice = +sBut.dataset.price;
   let sellPrice;
@@ -350,9 +176,6 @@ function sellBut(sBut) {
       break;
   }
 
-//   console.log(byPrice);
-//   console.log(sellPrice);
-
   if((+nCoins.textContent) >= 100){
     document.getElementsByClassName('upWind')[0].style.display = 'flex';
     console.log('слишком много денег, больше 100 нельзя');
@@ -371,10 +194,257 @@ function sellBut(sBut) {
         nCoins.textContent = (+nCoins.textContent) + sellPrice; //price;
     };
   };
-  updateCoins(nCoins.textContent);
+  productSelection();
+  updateData(nCoins.textContent);
 }
 
-  //---Скролл кнопки в header
+function productSelection() {
+    let quentProdSellArm;
+    let quentProdSellChip;
+    let quentProdSellSoul;
+
+    let checkDetailsStatArm;
+    let checkImageDitailsArm;
+    let checkDetailsStatChip;
+    let checkImageDitailsChip;
+    let checkDetailsStatSoul;
+    let checkImageDitailsSoul;
+
+    quentProdSellArm = document.querySelector(`#quent1`).textContent;
+    armProduction(quentProdSellArm, checkDetailsStatArm);
+
+    quentProdSellChip = document.querySelector(`#quent2`).textContent;
+    chipProduction(quentProdSellChip, checkDetailsStatChip, checkImageDitailsChip);
+
+    quentProdSellSoul = document.querySelector(`#quent3`).textContent;
+
+    checkDetailsStatSoul = document.querySelector('#ch9');
+    checkImageDitailsSoul = document.querySelector('#oneis9');
+
+    if(quentProdSellSoul >= 1){
+            checkDetailsStatSoul.removeAttribute('disabled');
+            checkImageDitailsSoul.classList.remove('sp3Dis');
+    } else {
+        checkDetailsStatSoul.setAttribute('disabled', '');
+        checkImageDitailsSoul.classList.add('sp3Dis');
+    }
+
+    detailsActiveArm = 0;//вывоит колличество активированных 
+    detailsActiveChip = 0;
+    detailsActiveSoul = 0;
+    for(let i = 1; i <= 9; i++){
+        if(i <= 4) {
+            detailsActiveArm += (+document.getElementById(`ch${i}`).checked);
+        } else if (i > 4 && i <= 8) {
+            detailsActiveChip += (+document.getElementById(`ch${i}`).checked);
+        } else {
+            detailsActiveSoul += (+document.getElementById(`ch${i}`).checked);
+        }
+    }
+
+    for(let a = 1; a <=9; a++){//отключение активных, если перед продажей запчастей были активны
+        if(a <= 4) {
+            checkImageDitailsArm = document.querySelector(`#oneis${a}`);
+            if (checkImageDitailsArm.classList.contains('sp1Dis') && document.querySelector(`#ch${a}`).checked) {
+                detailsActiveArm -= 1;
+                document.getElementById(`ch${a}`).checked = false;
+            }
+        
+        }   
+        if (a > 4 && a <=8) {
+            checkImageDitailsChip = document.querySelector(`#oneis${a}`);
+            if (checkImageDitailsChip.classList.contains('sp2Dis') && document.querySelector(`#ch${a}`).checked) {
+                detailsActiveChip -= 1;
+                document.getElementById(`ch${a}`).checked = false;
+            }
+        }
+        else{
+            checkImageDitailsSoul = document.querySelector(`#oneis${a}`);
+            if (checkImageDitailsSoul.classList.contains('sp3Dis')  && document.querySelector(`#ch${a}`).checked) {
+                detailsActiveSoul -= 1;
+                document.getElementById(`ch${a}`).checked = false;
+            }
+        }
+
+    }
+
+    console.log(detailsActiveArm, detailsActiveChip, detailsActiveSoul);
+    
+    //Здесь уведомление о нехватки для покупки
+    let notify = document.querySelector('.notification');
+
+    let notiArm = 4 - detailsActiveArm;
+    let notiChip = 4 - detailsActiveChip;
+    let notiSoul = 1 - detailsActiveSoul;
+    let nCoinsAbset = 10 - (+nCoins.textContent);
+
+    if(notiChip == 0 && notiSoul == 0 && notiArm == 0 && nCoinsAbset == 0){
+        notify.innerHTML = `Для производства биоробота хватает всего`;
+    } else {
+        notify.innerHTML = `Для производства биоробота не хватает`;
+
+        if(notiChip > 0 && notiSoul > 0 && notiArm > 0 && nCoinsAbset > 0){
+            notify.innerHTML += ` ${notiArm} биоруки, <br>${notiChip} микрочипа, ${notiSoul} души и ${nCoinsAbset} монет`;
+        } else{
+            if(notiChip > 0 && notiSoul > 0 && notiArm > 0){
+                notify.innerHTML += ` ${notiArm} биоруки, <br>${notiChip} микрочипа и ${notiSoul} души`;
+            } else if(notiChip > 0 && notiSoul > 0 && nCoinsAbset > 0) {
+                notify.innerHTML += ` ${notiChip} микрочипа, <br>${notiSoul} души и ${nCoinsAbset} монет`;
+            } else if(notiArm > 0 && notiSoul > 0 && nCoinsAbset > 0) {
+                notify.innerHTML += ` ${notiArm} биоруки, <br>${notiSoul} души и ${nCoinsAbset} монет`;
+            } else if(notiArm > 0 && notiChip > 0 && nCoinsAbset > 0) {
+                notify.innerHTML += ` ${notiArm} биоруки, <br>${notiChip} микрочипа и ${nCoinsAbset} монет`;
+            }
+            else {
+                if(notiChip > 0 && notiSoul > 0){
+                    notify.innerHTML += ` ${notiChip} микрочипа <br>и ${notiSoul} души`;
+                } else if(notiArm > 0 && notiSoul > 0){
+                    notify.innerHTML += ` ${notiArm} биоруки <br>и ${notiSoul} души`;
+                } else if(notiArm > 0 && notiChip > 0){
+                    notify.innerHTML += ` ${notiArm} биоруки <br>и ${notiChip} микрочипа`;
+                } else if(notiArm > 0 && nCoinsAbset > 0){
+                    notify.innerHTML += ` ${notiArm} биоруки <br>и ${nCoinsAbset} монет`;
+                } else if (notiChip > 0 && nCoinsAbset > 0) {
+                    notify.innerHTML += ` ${notiChip} микрочипа <br>и ${nCoinsAbset} монет`;
+                } else if(nCoinsAbset > 0 && notiSoul > 0) {
+                    notify.innerHTML += ` ${notiSoul} души <br>и ${nCoinsAbset} монет`;
+                }
+                else{
+                    if(notiArm > 0){
+                        notify.innerHTML += ` ${notiArm} биоруки, <br>`;
+                    }
+                    if(notiChip > 0){
+                        notify.innerHTML += ` ${notiChip} микрочипа`;
+                    }
+                    if(notiSoul > 0){
+                        notify.innerHTML += ` ${notiSoul} души`;
+                    }
+                    if(nCoinsAbset > 0){
+                        notify.innerHTML += ` ${nCoinsAbset} монет`;
+                    }
+                }
+            }
+        }
+    }
+    createRobo(quentProdSellArm);
+    // updateData(nCoins.textContent);
+}
+
+function armProduction (quentProdSell, checkDetailsStatArm, checkImageDitailsArm){
+    console.log('arm'+quentProdSell);
+
+    if(((+quentProdSell) < 4)){ 
+        sumSp = (4 - (+quentProdSell));
+
+        for(let i = 1; i <= 4; i++){
+            checkDetailsStatArm = document.querySelector(`#ch${i}`);
+            checkImageDitailsArm = document.querySelector(`#oneis${i}`);
+
+            if(checkImageDitailsArm.classList.contains('sp1Dis')){
+                checkDetailsStatArm.removeAttribute('disabled');
+                checkImageDitailsArm.classList.remove('sp1Dis');
+            }
+        }
+
+        for(let i = 4; i > (+quentProdSell); i--){
+        checkDetailsStatArm = document.querySelector(`#ch${i}`);
+        checkImageDitailsArm = document.querySelector(`#oneis${i}`);
+            
+        checkDetailsStatArm.setAttribute('disabled', '');
+        checkImageDitailsArm.classList.add('sp1Dis');
+        }
+
+    } else {
+        for(let i = 1; i <= 4; i++){
+            checkDetailsStatArm = document.querySelector(`#ch${i}`);
+            checkImageDitailsArm = document.querySelector(`#oneis${i}`);
+
+            if(checkImageDitailsArm.classList.contains('sp1Dis')){
+                checkDetailsStatArm.removeAttribute('disabled');
+                checkImageDitailsArm.classList.remove('sp1Dis');
+            }
+        }
+    }
+
+}
+
+function chipProduction (quentProdSell, checkDetailsStatChip, checkImageDitailsChip){
+    console.log('chip'+quentProdSell);
+
+    if(((+quentProdSell) < 4)){ 
+        sumSp = (4 - (+quentProdSell));
+
+        for(let i = 5; i <= 8; i++){
+            checkDetailsStatChip = document.querySelector(`#ch${i}`);
+            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
+
+            if(checkImageDitailsChip.classList.contains('sp2Dis')){
+                checkDetailsStatChip.removeAttribute('disabled');
+                checkImageDitailsChip.classList.remove('sp2Dis');
+            }
+        }
+
+        for(let i = 8; i > ((+quentProdSell) + 4); i--){
+            checkDetailsStatChip = document.querySelector(`#ch${i}`);
+            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
+
+            checkImageDitailsChip.classList.add('sp2Dis');
+            checkDetailsStatChip.setAttribute('disabled', '');
+        }
+
+
+    } else {
+        for(let i = 8; i >= 5; i--){
+            checkDetailsStatChip = document.querySelector(`#ch${i}`);
+            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
+
+            if(checkImageDitailsChip.classList.contains('sp2Dis')){
+                checkDetailsStatChip.removeAttribute('disabled');
+                checkImageDitailsChip.classList.remove('sp2Dis');
+            }
+        }
+    }
+
+}
+
+//произвести робота
+const creatRoboBut = document.querySelector('.byToCoinsBut');
+function createRobo() {
+    console.log(detailsActiveArm, detailsActiveChip, detailsActiveSoul); 
+    let sumDetails =  detailsActiveArm + detailsActiveChip + detailsActiveSoul;
+    const editCreatBut = creatRoboBut.outerHTML;
+    creatRoboBut.setAttribute('disabled', '')
+    // but.setAttribute('disabled', '');
+    console.log(sumDetails);
+
+    if(sumDetails == 9){
+        creatRoboBut.removeAttribute('disabled');
+
+        // creatRoboBut.document.addEventListener('click', goodCreatRobo);
+    }
+}
+
+function goodCreatRobo(){
+    document.getElementsByClassName('upGoodCreat')[0].style.display = 'flex';
+
+    document.querySelector('#quent1').textContent -= 4;
+    document.querySelector('#quent2').textContent -= 4;
+    document.querySelector('#quent3').textContent -= 1;
+
+    // quentProdSellArm -= 4;
+    // quentProdSellChip -= 4;
+    // quentProdSellSoul -= 1;
+    // let quentArm = 4;
+    // let quentChip = 4;
+    // let quentSoul = 1;
+    // console.log(quentProdSellArm, quentProdSellChip, quentProdSellSoul);
+    productSelection();
+    updateData(nCoins.textContent);
+}
+
+
+
+//Скролл кнопки в header
 function navDown(){
     const moveDown = document.querySelector('.byToCoinsBut');
     moveDown.scrollIntoView({ 
@@ -383,7 +453,8 @@ function navDown(){
       behavior: "smooth"
     });
   }
-//   addStock();
-updateCoins(quentityCoins);
+createRobo();
+productSelection();
+updateData(quentityCoins);
 
   

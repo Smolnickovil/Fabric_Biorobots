@@ -17,6 +17,16 @@
             <button class="closeBut" onclick="closeWind()"></button>
         </div>
     </div>
+    <div class="upGoodCreat">    
+        <div>
+            <img src="public/image/Money/Layer 19 copy 117 2.png" alt="">
+            <div class="textQue">
+                <h3>Биоробот произведён</h3>
+                <p>Поздравляем! Вы произвели биоробота</p>
+            </div>
+            <button class="closeBut" onclick="closeGoodCreat()"></button>
+        </div>
+    </div>
         <header>
             <img src="/public/image/Pacman.svg" alt="">
             <!-- <div></div> -->
@@ -112,13 +122,13 @@
                             <div class="bioarm">
                                 <div class="name">Биорука</div>
                                 <div class="price">Стоимость: 5 монет</div><!--Скорее всего здесь не div -->
-                                <div class="quantity"><div id="quent1">2</div>шт</div>
+                                <div class="quantity"><div id="quent1">0</div>шт</div>
                                 <button data-price="7" id="sell1" class="sellBut" onclick="sellBut(this)">Продать</button>
                             </div>
                             <div class="microchip">
                                 <div class="name">Микрочип</div>
                                 <div class="price">Стоимость: 3 монет</div><!--Скорее всего здесь не div -->
-                                <div class="quantity"><div id="quent2">3</div>шт</div>
+                                <div class="quantity"><div id="quent2">0</div>шт</div>
                                 <button data-price="5" id="sell2" class="sellBut" onclick="sellBut(this)">Продать</button>
                             </div>
                             <div class="soul">
@@ -177,39 +187,39 @@
                                 </div>
                                 <div class="configRob">
                                     <label>
-                                        <input type="checkbox" name="" id="ch1" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch1" onclick="productSelection()">
                                         <span  id="oneis1" class="sp1"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch2" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch2" onclick="productSelection()">
                                         <span id="oneis2" class="sp1"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch3" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch3" onclick="productSelection()">
                                         <span id="oneis3" class="sp1"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch4" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch4" onclick="productSelection()">
                                         <span id="oneis4" class="sp1"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch5" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch5" onclick="productSelection()">
                                         <span id="oneis5" class="sp2"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch6" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch6" onclick="productSelection()">
                                         <span id="oneis6" class="sp2"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch7" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch7" onclick="productSelection()">
                                         <span id="oneis7" class="sp2"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch8" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch8" onclick="productSelection()">
                                         <span id="oneis8" class="sp2"></span>
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="" id="ch9" onclick="updateCoins()">
+                                        <input type="checkbox" name="" id="ch9" onclick="productSelection()">
                                         <span id="oneis9" class="sp3"></span>
                                     </label>
 
@@ -224,8 +234,8 @@
                                     <img src="image/Production/Icon meh (2).svg" alt=""> -->
                                 </div>
                                 <div class="blockBy">
-                                    <button class="byToCoinsBut">Произвести за 10 монет</button>
-                                    <div class="notification">Для производства биоробота не хватает 2 биоруки, <br>3 микрочипа и 1 души</div>   
+                                    <button class="byToCoinsBut" onclick="goodCreatRobo()">Произвести за 10 монет</button>
+                                    <div class="notification"></div>   
                                 </div>
                             </div>
                             <!-- <div class="image">

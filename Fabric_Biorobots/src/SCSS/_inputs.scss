@@ -180,7 +180,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    label{
+    >label{
         width: 48px;
         height: 48px;
 
@@ -234,15 +234,15 @@
             background-image: url(/public/image/Production/soul_disabaled.svg);
         }
 
-        input:checked ~ .sp1{
+        >input:checked ~ .sp1{
             background-image: url(/public/image/Production/meh_activ.svg);
         }
 
-        input:checked ~ .sp2{
+        >input:checked ~ .sp2{
             background-image: url(/public/image/Production/chip_activ.svg);
         }
 
-        input:checked ~ .sp3{
+        >input:checked ~ .sp3{
                 background-image: url(/public/image/Production/soul_activ.svg);
         }
     }    
