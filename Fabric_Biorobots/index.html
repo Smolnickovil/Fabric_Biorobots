@@ -140,14 +140,14 @@
                                         <div class="variable">
                                             <div class="var1">
                                                 <label>
-                                                    <input checked type="radio" id="typeRob1" name="type" value="Front">
+                                                    <input checked type="radio" id="typeRob1" name="type" value="Front" onclick="radioinput()">
                                                     <span></span>
                                                 </label>
                                                 <p>FrontEnd</p>
                                             </div>
                                             <div class="var2">
                                                 <label>
-                                                    <input type="radio" id="typeRob2" name="type" value="Design">
+                                                    <input type="radio" id="typeRob2" name="type" value="Design" onclick="radioinput()">
                                                     <span></span>
                                                 </label>
                                                 <p>Design</p>
@@ -159,14 +159,14 @@
                                         <div class="variable">
                                             <div class="var1">
                                                 <label>
-                                                    <input checked type="radio" name="gender" value="Male" >
+                                                    <input checked type="radio" id="genRob1" name="gender" value="Male" onclick="radioinput()">
                                                     <span></span>
                                                 </label>
                                                 <p>Male</p>
                                             </div>
                                             <div class="var2">
                                                 <label>
-                                                    <input type="radio" name="gender"  value="Famale">
+                                                    <input type="radio" id="genRob2" name="gender"  value="Famale" onclick="radioinput()">
                                                     <span></span>
                                                 </label>
                                                 <p>Famale</p>
@@ -176,7 +176,44 @@
                                     </div>
                                 </div>
                                 <div class="configRob">
-                                    <img #="1" src="image/Production/Icon meh.svg" alt="">
+                                    <label>
+                                        <input type="checkbox" name="" id="ch1" onclick="updateCoins()">
+                                        <span  id="oneis1" class="sp1"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch2" onclick="updateCoins()">
+                                        <span id="oneis2" class="sp1"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch3" onclick="updateCoins()">
+                                        <span id="oneis3" class="sp1"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch4" onclick="updateCoins()">
+                                        <span id="oneis4" class="sp1"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch5" onclick="updateCoins()">
+                                        <span id="oneis5" class="sp2"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch6" onclick="updateCoins()">
+                                        <span id="oneis6" class="sp2"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch7" onclick="updateCoins()">
+                                        <span id="oneis7" class="sp2"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch8" onclick="updateCoins()">
+                                        <span id="oneis8" class="sp2"></span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" id="ch9" onclick="updateCoins()">
+                                        <span id="oneis9" class="sp3"></span>
+                                    </label>
+
+                                    <!-- <img #="1" src="image/Production/Icon meh.svg" alt="">
                                     <img src="image/Production/Icon meh.svg" alt="">
                                     <img src="image/Production/Icon meh.svg" alt="">
                                     <img src="image/Production/Icon meh.svg" alt="">
@@ -184,7 +221,7 @@
                                     <img src="image/Production/Icon meh (1).svg" alt="">
                                     <img src="image/Production/Icon meh (1).svg" alt="">
                                     <img src="image/Production/Icon meh (1).svg" alt="">
-                                    <img src="image/Production/Icon meh (2).svg" alt="">
+                                    <img src="image/Production/Icon meh (2).svg" alt=""> -->
                                 </div>
                                 <div class="blockBy">
                                     <button class="byToCoinsBut">Произвести за 10 монет</button>
@@ -193,7 +230,8 @@
                             </div>
                             <!-- <div class="image">
                             </div> -->
-                            <img src="image/Biorobots _ Тестовое задание _ ATW/3.svg" alt="">
+                            <img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/3.svg" alt="">
+                            <!-- <img class="robot" alt=""> -->
                         </div>
                     </section>
                 <!-- </div> -->

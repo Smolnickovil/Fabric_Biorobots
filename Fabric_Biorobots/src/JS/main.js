@@ -19,13 +19,183 @@ let editSellButConten;
 let quentityProductSell;
 let contentQuentProd;
 
+let addStockQuent;
+
+//Изменение иконок запчастей при сборки робота
+
+let sumSp = 0;
+let detailsActiveArm;
+let detailsActiveChip;
+let detailsActiveSoul;
+
+// console.log(quentProdS);
+// productSelection();
+function productSelection() {
+    let quentProdSellArm;
+    let quentProdSellChip;
+    let quentProdSellSoul;
+
+    let checkDetailsStatArm;
+    let checkImageDitailsArm;
+    let checkDetailsStatChip;
+    let checkImageDitailsChip;
+    let checkDetailsStatSoul;
+    let checkImageDitailsSoul;
+
+
+    // for(let i = 1; i <= 3; i++){
+        quentProdSellArm = document.querySelector(`#quent1`).textContent;
+        armProduction(quentProdSellArm, checkDetailsStatArm, checkImageDitailsArm);
+
+        quentProdSellChip = document.querySelector(`#quent2`).textContent;
+        chipProduction(quentProdSellChip, checkDetailsStatChip, checkImageDitailsChip);
+
+        quentProdSellSoul = document.querySelector(`#quent3`).textContent;
+
+        checkDetailsStatSoul = document.querySelector('#ch9');
+        checkImageDitailsSoul = document.querySelector('#oneis9');
+
+        if(quentProdSellSoul >= 1){
+                checkDetailsStatSoul.removeAttribute('disabled');
+                checkImageDitailsSoul.classList.remove('sp3Dis');
+                // console.log('arm');
+        } else {
+            checkDetailsStatSoul.setAttribute('disabled', '');
+            checkImageDitailsSoul.classList.add('sp3Dis');
+        }
+
+    // if(addStockArm) {
+    //     quentProdSellArm = addStockArm;
+    //     armProduction(quentProdSellArm);
+    //     console.log(quentProdSellArm);
+    // }
+    // console.log(quentProdSellArm);
+
+    // console.log(addStockArm);
+
+        //---------------------вывоит колличество активированных 
+        detailsActiveArm = 0;
+        detailsActiveChip = 0;
+        detailsActiveSoul = 0;
+
+        for(let i = 1; i <= 9; i++){
+            if(i <= 4) {
+                detailsActiveArm += (+document.querySelector(`#ch${i}`).checked);
+                // console.log('arm')
+            } else if (i > 4 && i <= 8) {
+                detailsActiveChip += (+document.querySelector(`#ch${i}`).checked);
+                // console.log('chip')
+            } else {
+                detailsActiveSoul += (+document.querySelector(`#ch${i}`).checked);
+            }
+        }
+        console.log(detailsActiveArm, detailsActiveChip, detailsActiveSoul);
+        //-----------------------
+    
+    // updateCoins(nCoins.textContent);
+}
+
+function armProduction (quentProdSell, checkDetailsStatArm, checkImageDitailsArm){
+    console.log('arm'+quentProdSell);
+
+    if(((+quentProdSell) < 4)){ 
+        sumSp = (4 - (+quentProdSell));
+
+            for(let i = 1; i <= 4; i++){
+                checkDetailsStatArm = document.querySelector(`#ch${i}`);
+                checkImageDitailsArm = document.querySelector(`#oneis${i}`);
+
+                if(checkImageDitailsArm.classList.contains('sp1Dis')){
+                    checkDetailsStatArm.removeAttribute('disabled');
+                    checkImageDitailsArm.classList.remove('sp1Dis');
+                    // console.log('arm');
+                }
+            }
+
+            for(let i = 4; i > (+quentProdSell); i--){
+            checkDetailsStatArm = document.querySelector(`#ch${i}`);
+            // console.log(sp);
+            // checkImageDitails = document.querySelector(`#oneis${a}`).style.display = 'none';
+            checkImageDitailsArm = document.querySelector(`#oneis${i}`);
+                
+            checkDetailsStatArm.setAttribute('disabled', '');
+            checkImageDitailsArm.classList.add('sp1Dis');
+            // if(checkImageDitails.classList.contains('sp1Dis')) console.log(checkImageDitails);
+            // console.log(checkImageDitails);
+        }
+
+    } else {
+        for(let i = 1; i <= 4; i++){
+            checkDetailsStatArm = document.querySelector(`#ch${i}`);
+            checkImageDitailsArm = document.querySelector(`#oneis${i}`);
+
+            if(checkImageDitailsArm.classList.contains('sp1Dis')){
+                checkDetailsStatArm.removeAttribute('disabled');
+                checkImageDitailsArm.classList.remove('sp1Dis');
+            }
+            // console.log(document.querySelector('#ch1').checked);
+        }
+    }
+
+}
+
+function chipProduction (quentProdSell, checkDetailsStatChip, checkImageDitailsChip){
+    console.log('chip'+quentProdSell);
+
+    if(((+quentProdSell) < 4)){ 
+        sumSp = (4 - (+quentProdSell));
+
+        for(let i = 5; i <= 8; i++){
+            checkDetailsStatChip = document.querySelector(`#ch${i}`);
+            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
+
+            if(checkImageDitailsChip.classList.contains('sp2Dis')){
+                checkDetailsStatChip.removeAttribute('disabled');
+                checkImageDitailsChip.classList.remove('sp2Dis');
+                // console.log('chip');
+            }
+        }
+
+        for(let i = 8; i > ((+quentProdSell) + 4); i--){
+            checkDetailsStatChip = document.querySelector(`#ch${i}`);
+            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
+
+            checkImageDitailsChip.classList.add('sp2Dis');
+            checkDetailsStatChip.setAttribute('disabled', '');
+            // if(checkImageDitails.classList.contains('sp1Dis')) console.log(checkImageDitails);
+            // console.log(checkImageDitails);
+        }
+
+
+    } else {
+        for(let i = 8; i >= 5; i--){
+            checkDetailsStatChip = document.querySelector(`#ch${i}`);
+            checkImageDitailsChip = document.querySelector(`#oneis${i}`);
+
+            if(checkImageDitailsChip.classList.contains('sp2Dis')){
+                checkDetailsStatChip.removeAttribute('disabled');
+                checkImageDitailsChip.classList.remove('sp2Dis');
+            }
+            // console.log(document.querySelector('#ch1').checked);
+        }
+    }
+
+}
+
+// for(let i = 1; i <= 4; i++){
+//     sp = document.querySelector(`#ch${i}`);
+//     spp = sp.checked;
+    
+// }
+// que -= (4 - (+sumSp));
+// console.log(que);
+//------------------------
 
 if(nCoins.textContent == ''){
     nCoins.textContent = 0;
-}
+};
 
-function updateCoins (coinQuen){
-    // console.log(coinQue);
+function updateCoins (coinQuen, addStockProd){
     for(let i = 1; i <= 3; i++){
         priceElement = document.querySelector(`#pr${i}`);
         editInstallBut = document.querySelector(`#inst${i}`);
@@ -39,15 +209,15 @@ function updateCoins (coinQuen){
 
         if(coinQuen < contentPrEl){//если денег меньше чем цена, кнопка disabled
         editInstallBut.setAttribute('disabled', '');//делает кнопку неактивной setAtribut прописывает параметры в элемент
-        } else{
+        } else {
         editInstallBut.removeAttribute('disabled');//делает кнопку неактивной setAtribut прописывает параметры в элемент
-        }
+        };
 
         if(contentQuentProd <= 0){
         editSellBut.setAttribute('disabled', '');
-        } else{
+        } else {
         editSellBut.removeAttribute('disabled');
-        }
+        };
     }
 
     for(let i = 0; i <= coinQuen; i++){//цикл интерактивно показывающий количество монет
@@ -60,13 +230,47 @@ function updateCoins (coinQuen){
                 `<img style = "margin-left: ${7 * i}px;  z-index: ${2-i};" class="money n${i}"  src="public/image/Money/money.png" alt="">
                 `
             );
-        }
+        };
     }
-} 
+
+    productSelection(); 
+}
+
+function radioinput(){
+        let radTFront = document.querySelector(`#typeRob1`);
+        let meaningT;
+        let radGMale = document.querySelector(`#genRob1`);
+        let meaningG;
+        let robotImg = document.querySelector('.robot');
+
+        if(radTFront.checked == true){
+            meaningT = "frontent";
+
+            if(radGMale.checked == true){
+                meaningG = 'male';
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/3.svg" alt="">`;
+            } else {
+                meaningG = 'female';
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/4.svg" alt="">`;
+            };
+
+        } else {
+            meaningT = "design";
+
+            if(radGMale.checked){
+                meaningG = 'male';
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/1-1.svg" alt="">`;
+            } else {
+                meaningG = 'female';
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/2.svg" alt="">`;
+            };
+        };
+
+    updateCoins(nCoins.textContent);
+}
 
 function closeWind(){
     document.getElementsByClassName('upWind')[0].style.display = 'none';
-
 }
 
 function addCoinsBut() {
@@ -81,8 +285,8 @@ function addCoinsBut() {
   
       } else {
         nCoins.textContent = (+nCoins.textContent) + 5; //price;
-      }
-    }
+      };
+    };
     updateCoins(nCoins.textContent);
 }  
 
@@ -91,7 +295,7 @@ function inpCheck() { //функции checbox
       isChecked = true;
     } else if (isChecked == true){
       isChecked = false;
-    }
+    };
     updateCoins(nCoins.textContent);
   }
   
@@ -99,12 +303,10 @@ function inpCheck() { //функции checbox
     const price = id.dataset.price;
     nCoins.textContent -= price; //price;
   
-    //Здесь будем прибавлять на склад товар
-    addStock(price,   nCoins.textContent);
+    addStock(price,   nCoins.textContent);//Здесь будем прибавлять на склад товар
   }
 
   function addStock(priceBy, nCoins) {//добавление товара в склад
-    let addStockQuent;
     let butSel;
   
     for(let i = 1; i <= 3; i++) {
@@ -113,10 +315,19 @@ function inpCheck() { //функции checbox
       
       if((+priceBy) == (+butSel.dataset.price)){
         addStockQuent.textContent = (+addStockQuent.textContent) + 1;
-      }
+        //-------
+        // productSelection(nCoins, addStockQuent.textContent);
+        // if(addStockQuent = document.querySelector(`#quent1`)){
+            updateCoins(nCoins); 
+        // }        
+        // console.log((+addStockQuent.textContent));
+        //---------
+      };
     }
-  
-    updateCoins(nCoins); 
+    //--------------
+    // productSelection(nCoins, (+addStockQuent.textContent));
+    //--------------
+
   }
 
   //функции кнопки продать
@@ -124,7 +335,6 @@ function sellBut(sBut) {
   const byPrice = +sBut.dataset.price;
   let sellPrice;
  
-
   switch (byPrice) {
     case 7:
       quentityProductSell = document.querySelector('#quent1');
@@ -140,8 +350,8 @@ function sellBut(sBut) {
       break;
   }
 
-  console.log(byPrice);
-  console.log(sellPrice);
+//   console.log(byPrice);
+//   console.log(sellPrice);
 
   if((+nCoins.textContent) >= 100){
     document.getElementsByClassName('upWind')[0].style.display = 'flex';
@@ -155,12 +365,12 @@ function sellBut(sBut) {
         
         document.getElementsByClassName('upWind')[0].style.display = 'flex';
         console.log('слишком много денег, больше 100 нельзя');
-    }else{
-    // console.log(quentityProductSell.textContent);
+
+    } else {
+
         nCoins.textContent = (+nCoins.textContent) + sellPrice; //price;
-    }
-  }
-//   console.log(byPrice >= 86); 
+    };
+  };
   updateCoins(nCoins.textContent);
 }
 
@@ -173,7 +383,7 @@ function navDown(){
       behavior: "smooth"
     });
   }
-  
+//   addStock();
 updateCoins(quentityCoins);
 
   
