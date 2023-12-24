@@ -21,6 +21,9 @@ let contentQuentProd;
 
 let addStockQuent;
 
+//для кнопки создать робота за 10 монет
+const creatRoboBut = document.querySelector('.byToCoinsBut');
+
 //Изменение иконок запчастей при сборки робота
 let sumSp = 0;
 let detailsActiveArm;
@@ -121,7 +124,9 @@ function addCoinsBut() {
         nCoins.textContent = (+nCoins.textContent) + 5; //price;
       };
     };
-    updateData(nCoins.textContent);
+    // createRobo();
+    productSelection();
+    // updateData(nCoins.textContent);
 }  
 
 function inpCheck() { //функция checbox
@@ -326,8 +331,8 @@ function productSelection() {
             }
         }
     }
-    createRobo(quentProdSellArm);
-    // updateData(nCoins.textContent);
+    createRobo();
+    updateData(nCoins.textContent);
 }
 
 function armProduction (quentProdSell, checkDetailsStatArm, checkImageDitailsArm){
@@ -408,16 +413,17 @@ function chipProduction (quentProdSell, checkDetailsStatChip, checkImageDitailsC
 }
 
 //произвести робота
-const creatRoboBut = document.querySelector('.byToCoinsBut');
 function createRobo() {
     console.log(detailsActiveArm, detailsActiveChip, detailsActiveSoul); 
     let sumDetails =  detailsActiveArm + detailsActiveChip + detailsActiveSoul;
-    const editCreatBut = creatRoboBut.outerHTML;
+    const money = document.querySelector('.numCoins').textContent;
+
     creatRoboBut.setAttribute('disabled', '')
     // but.setAttribute('disabled', '');
     console.log(sumDetails);
 
-    if(sumDetails == 9){
+    console.log('Money:' +money);
+    if(sumDetails == 9 && (+money) >= 10){
         creatRoboBut.removeAttribute('disabled');
 
         // creatRoboBut.document.addEventListener('click', goodCreatRobo);
@@ -430,14 +436,8 @@ function goodCreatRobo(){
     document.querySelector('#quent1').textContent -= 4;
     document.querySelector('#quent2').textContent -= 4;
     document.querySelector('#quent3').textContent -= 1;
+    document.querySelector('.numCoins').textContent -= 10;
 
-    // quentProdSellArm -= 4;
-    // quentProdSellChip -= 4;
-    // quentProdSellSoul -= 1;
-    // let quentArm = 4;
-    // let quentChip = 4;
-    // let quentSoul = 1;
-    // console.log(quentProdSellArm, quentProdSellChip, quentProdSellSoul);
     productSelection();
     updateData(nCoins.textContent);
 }
