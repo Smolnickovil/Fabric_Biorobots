@@ -1,0 +1,51 @@
+.mainPage{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 100px;
+    margin-left: 106px;
+
+    .mainText{
+        max-width: 470px;
+
+        h1{
+            margin: 24px  0px;
+            font-family: Montserrat;
+            font-size: 56px;
+            font-style: normal;
+            line-height: 72px; /* 128.571% */
+        }
+
+        p{  
+            @include greyText(600);    
+        }   
+    }
+
+    .windRobots{ 
+        margin-left: 50px;   
+        flex-shrink: 0;
+        display: flex;
+
+        .circle{
+            width: 275px;
+            height: 275px;
+
+            flex-shrink: 0;
+            margin: 4px 60px 41px 31px;
+
+            border-radius: 275px;
+            background: #1E2936;
+        }
+        .robots1{
+            position: absolute;
+            margin-left: 0px;
+        }
+
+        .robots2{
+            position: absolute;
+            margin-left:20px + 176px;
+            margin-top: 102px;
+            
+            transform: rotateY(180deg);
+        }
+    }
+}

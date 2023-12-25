@@ -2,6 +2,11 @@
 @import "buttons";
 @import "textStyle";
 @import "inputs";
+@import "blockWallet";
+@import "blockMarket";
+@import "blockStock";
+@import "blockProduction";
+@import "mainPage";
 
 @media screen and (max-width: 1024px) {
     .createRob{
@@ -48,7 +53,6 @@
 @media screen and (max-width: 768px) {
     .createRob{
         margin-left: 182px;           
-
     }
 
     .mainText{
@@ -69,7 +73,6 @@
         }
     }
 }
-
 
 *{
     margin: 0;
@@ -148,14 +151,12 @@ body{
     }
 }
 
-
 header{
     display: flex;
     justify-content: center;
     max-width: 1016px;
     margin: 48px auto 0px;
 }
-
 
 .content{
     max-width: 1016px;
@@ -208,210 +209,13 @@ header{
         }   
     }
 
-
     .greetings{
 
         padding: 96px 0px 0px 0px;
-
-        .mainPage{
-            display: flex;
-            flex-wrap: wrap-reverse;
-            margin-bottom: 100px;
-            margin-left: 106px;
-
-            .mainText{
-                max-width: 470px;
-
-                h1{
-                    margin: 24px  0px;
-                    font-family: Montserrat;
-                    font-size: 56px;
-                    font-style: normal;
-                    line-height: 72px; /* 128.571% */
-                }
-    
-                p{  
-                    @include greyText(600);    
-                }   
-            }
-    
-            .windRobots{ 
-                margin-left: 50px;   
-                flex-shrink: 0;
-                display: flex;
-    
-                .circle{
-                    width: 275px;
-                    height: 275px;
-
-                    flex-shrink: 0;
-                    margin: 4px 60px 41px 31px;
-        
-                    border-radius: 275px;
-                    background: #1E2936;
-                }
-                .robots1{
-                    position: absolute;
-                    margin-left: 0px;
-                }
-    
-                .robots2{
-                    position: absolute;
-                    margin-left:20px + 176px;
-                    margin-top: 102px;
-                    
-                    transform: rotateY(180deg);
-                }
-            }
-        }
-
         // .mainContent{
 
-            .blockWallet{
-                @include H2;
-                margin-bottom: 96px;
-                margin-left: 106px;
-                .coins{
-                    display: flex;
-                    margin-top: 60px;
-                    flex-wrap: wrap;
-                    position: relative;
-                    height: 20px;
-                    margin-bottom: 24px;
-                    .money{
-                        display: inline-block;
-                        position: absolute;
-                    }                
-                }
-                
 
-                .textCoins{
-                    @include greyText;    
 
-                    display: flex;
-
-                    .numCoins{
-                        @include greyText(700);    
-                    }
-                    .nameProd{
-                        margin: 0 5px;
-                    }
-                }
-            }
-
-            .blockMarket{
-                @include H2;
-
-                padding-bottom: 100px;
-                margin-left: 106px;
-
-                .products{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    
-                    img{
-                        margin-top: 60px;
-                    }
-                
-                    .name{
-                        margin-top: 25px;
-
-                        text-align: center;
-                        font-family: Montserrat;
-                        font-size: 20px;
-                        font-weight: 600;
-                        line-height: 32px;  
-                    }
-
-                    .price{
-                        @include price;
-                        margin-top: 5px;
-                        margin-bottom: 24px;
-                        display: flex;
-                        justify-content: center;
-                        
-                        div{
-                            margin: 0 4px;
-                        }
-                    }
-    
-                }
-            }
-
-            .blockStock{
-                @include H2;
-                padding-bottom: 96px;
-                margin-left: 106px;
-
-                .products{
-                    margin-top: 60px;
-
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-
-                    .name{
-                        text-align: center;
-                        font-family: Montserrat;
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 32px;  
-                    }
-
-                    .price{
-                        @include price;
-                        margin-top: 5px;                        
-                    }
-    
-                    .quantity{
-                        @include quan;
-                        margin-top: 15px;
-                        display: flex;
-                        justify-content: center;
-                    }
-                }
-            }
-
-            .blockProduction{
-                @include H2(72px);
-                padding-bottom: 236px;
-                margin-left: 106px;
-
-                .prodPrev{
-                    display: flex;
-                    flex-wrap: wrap-reverse;
-
-                    .production{
-                        margin-top: 40px;
-                        display: flex;
-                        flex-wrap: wrap;
-                        max-width: 482px;        
-    
-                        .blockBy{
-                            display: flex;
-                            flex-wrap: wrap-reverse;
-                            // display: inline-block;
-    
-                            .notification{
-                                @include notify;
-                                width: 195px;
-                                margin-left: 24px;
-                                margin-top: 20px;
-                            }
-                        }
-                    }
-
-                    // .image{
-                    //     width: 236px;
-                    //     height: 320px;
-                    //     background: url(/public/image/sprait_BioRob/robots.png) no-repeat;
-                    //     background-position: -246px -330px;
-                    //     background-size: (236px * 4) (320px * 3);
-                    // }
-                }
-            }
         // }
     }
 }

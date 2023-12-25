@@ -1,0 +1,31 @@
+.blockWallet{
+    @include H2;
+    margin-bottom: 96px;
+    margin-left: 106px;
+    .coins{
+        display: flex;
+        margin-top: 60px;
+        flex-wrap: wrap;
+        position: relative;
+        height: 20px;
+        margin-bottom: 24px;
+        .money{
+            display: inline-block;
+            position: absolute;
+        }                
+    }
+    
+
+    .textCoins{
+        @include greyText;    
+
+        display: flex;
+
+        .numCoins{
+            @include greyText(700);    
+        }
+        .nameProd{
+            margin: 0 5px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.blockProduction{
+    @include H2(72px);
+    padding-bottom: 236px;
+    margin-left: 106px;
+
+    .prodPrev{
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+        .production{
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 482px;        
+
+            .blockBy{
+                display: flex;
+                flex-wrap: wrap-reverse;
+                // display: inline-block;
+
+                .notification{
+                    @include notify;
+                    width: 195px;
+                    margin-left: 24px;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        // .image{
+        //     width: 236px;
+        //     height: 320px;
+        //     background: url(/public/image/sprait_BioRob/robots.png) no-repeat;
+        //     background-position: -246px -330px;
+        //     background-size: (236px * 4) (320px * 3);
+        // }
+    }
+}
