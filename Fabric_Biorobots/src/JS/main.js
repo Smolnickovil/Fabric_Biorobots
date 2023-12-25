@@ -29,6 +29,11 @@ let sumSp = 0;
 let detailsActiveArm;
 let detailsActiveChip;
 let detailsActiveSoul;
+//------
+let quentProdSellArm;
+let quentProdSellChip;
+let quentProdSellSoul;
+//-------
 
 function updateData (coinQuen, addStockProd){
 
@@ -67,39 +72,6 @@ function updateData (coinQuen, addStockProd){
             );
         };
     }
-}
-
-function radioinput(){
-        let radTFront = document.querySelector(`#typeRob1`);
-        let meaningT;
-        let radGMale = document.querySelector(`#genRob1`);
-        let meaningG;
-        let robotImg = document.querySelector('.robot');
-
-        if(radTFront.checked == true){
-            meaningT = "frontent";
-
-            if(radGMale.checked == true){
-                meaningG = 'male';
-                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/3.svg" alt="">`;
-            } else {
-                meaningG = 'female';
-                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/4.svg" alt="">`;
-            };
-
-        } else {
-            meaningT = "design";
-
-            if(radGMale.checked){
-                meaningG = 'male';
-                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/1-1.svg" alt="">`;
-            } else {
-                meaningG = 'female';
-                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/2.svg" alt="">`;
-            };
-        };
-    productSelection();
-    updateData(nCoins.textContent);
 }
 
 function closeWind(){
@@ -203,11 +175,80 @@ function sellBut(sBut) {
   updateData(nCoins.textContent);
 }
 
-function productSelection() {
-    let quentProdSellArm;
-    let quentProdSellChip;
-    let quentProdSellSoul;
+function radioinput(){ //функция изменения робота при выборе пола и т.д.
+    let radTFront = document.querySelector(`#typeRob1`);
+    let meaningT;
+    let radGMale = document.querySelector(`#genRob1`);
+    let meaningG;
+    let robotImg = document.querySelector('.robot');
+    // console.log(quentProdSellArm.textContent);
+    // console.log(detailsActiveArm);
+    // console.log(detailsActiveChip);
+    let summDet = detailsActiveArm + detailsActiveChip + detailsActiveSoul;
+    console.log('RadioImp', summDet);
 
+    if(radTFront.checked == true){
+        meaningT = "frontent";
+
+        if(radGMale.checked == true){
+            meaningG = 'male';
+            if(quentProdSellArm.textContent < 4 || quentProdSellChip < 4 || quentProdSellSoul < 1){
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/3.svg" alt="">`;
+            } else {
+                if(summDet < 9) {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/33.svg" alt="">`;
+                } else {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/Front Male 1.svg" alt="">`;
+                }
+            }
+            
+        } else {
+            meaningG = 'female';
+            if(quentProdSellArm.textContent < 4 || quentProdSellChip < 4 || quentProdSellSoul < 1){
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/2.svg" alt="">`;
+            } else {
+                if(summDet < 9) {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/44.svg" alt="">`;
+                } else {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/Front Famale 1.svg" alt="">`;
+                }
+            }
+        };
+
+    } else {
+        meaningT = "design";
+
+        if(radGMale.checked){
+            meaningG = 'male';
+
+            if(quentProdSellArm.textContent < 4 || quentProdSellChip < 4 || quentProdSellSoul < 1){
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/1-1.svg" alt="">`;
+            } else {
+                if(summDet < 9) {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/1.svg" alt="">`;
+                } else {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/Designer Male 1.svg" alt="">`;
+                }
+        }
+        } else {
+            meaningG = 'female';
+
+            if(quentProdSellArm.textContent < 4 || quentProdSellChip < 4 || quentProdSellSoul < 1){
+                robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/4.svg" alt="">`;
+                } else {
+                if(summDet < 9) {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/22.svg" alt="">`;
+                } else {
+                    robotImg.outerHTML = `<img class="robot" src="image/Biorobots _ Тестовое задание _ ATW/Designer Famale 1.svg" alt="">`;
+                }
+            }
+        };
+    };
+// productSelection();
+updateData(nCoins.textContent);
+}
+
+function productSelection() {
     let checkDetailsStatArm;
     let checkImageDitailsArm;
     let checkDetailsStatChip;
@@ -332,7 +373,8 @@ function productSelection() {
         }
     }
     createRobo();
-    updateData(nCoins.textContent);
+    radioinput()
+    // updateData(nCoins.textContent);
 }
 
 function armProduction (quentProdSell, checkDetailsStatArm, checkImageDitailsArm){
@@ -425,7 +467,6 @@ function createRobo() {
     console.log('Money:' +money);
     if(sumDetails == 9 && (+money) >= 10){
         creatRoboBut.removeAttribute('disabled');
-
         // creatRoboBut.document.addEventListener('click', goodCreatRobo);
     }
 }
@@ -437,6 +478,8 @@ function goodCreatRobo(){
     document.querySelector('#quent2').textContent -= 4;
     document.querySelector('#quent3').textContent -= 1;
     document.querySelector('.numCoins').textContent -= 10;
+
+
 
     productSelection();
     updateData(nCoins.textContent);
